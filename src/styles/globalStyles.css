@@ -1,0 +1,12 @@
+@import './fonts.css';
+@import './body.css';
+
+:root {
+    --basefontFamly: Avenir, Helvetica, sans-serif;
+  --headline1: bold 2rem / normal var(--basefontFamly);
+  --headline2: bold 1.5rem/1.75rem var(--basefontFamly);
+  --baseFont: normal 0.875rem/1.375rem var(--basefontFamly);
+  --baseFontBold: bold 0.875rem/1.375rem var(--basefontFamly);
+  --textColorBase:  rgb(156 163 175 / 1);
+  --textColorHeading:  rgb(255 255 255 / 1);
+  }
