@@ -1,102 +1,84 @@
-.container {
-    background: #111827;
-    min-height: 100dvh;
-    color: rgb(255 255 255);
-    padding-inline: 5rem;
-  }
-
-  .hero  {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2.5rem;
-  }
-
-
-  .heroName {
-    color: var(--textColorHeading);
-    font-family: var(--baseFont);
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-  
-  
-
-  .heroSubTitle {
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
-    color: var(--textColorBase);
-    margin-top: 0.5rem;
-    margin-block-end: 0.5rem;
-  }
-
-  .heroSkills {
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
-    margin-top: 0.3rem;
-    color: var(--textColorBase);
-  }
-
-  .heroSocial {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-  }
-
-  .heroSociaLinks {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem; 
-    gap: .5rem;
-  }
-
-  .heroSociaIcon {
-    height: 1.5rem;
-    width: 1.5rem;
-    color: rgb(255 255 255);
-  }
-
-  .heroSociaButton {
-    all: unset;
-  }
-
-
-  .sectionTitle {
-    font-size: 2rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
-    color: var(--textColorHeading);
-    margin-top: 0.5rem;
-    margin-block-end: 0.5rem;
-  }
-
-.skills {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(31 41 55 / 1);
-  line-height: .8rem;
-  font-size: 900;
-  padding-block: .5rem;
-  padding-inline: .5rem;
-  border-radius: 999px;
+.pageWrapper {
+  background: #111827;
+  min-height: 100dvh;
+  color: rgb(255, 255, 255);
+  padding-inline: 5rem;
 }
 
-.skillsContainer {
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--paddingTopSection);
+}
+
+.mainHeading {
+  color: var(--textColorHeading);
+  font-family: var(--baseFont);
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.subHeading {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--textColorBase);
+  margin-top: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+.skillsDescription {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 0.3rem;
+  color: var(--textColorBase);
+}
+
+.socialLinksWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.skillsGrid {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.skillsContainer > p {
+.skillItem {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(31 41 55 / 1);
-  line-height: .8rem;
-  font-size: 900;
-  padding-block: .5rem;
-  padding-inline: .5rem;
+  line-height: 0.8rem;
+  font-weight: 900;
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
   border-radius: 999px;
+}
+
+.contactInfo {
+  font-size: 1rem;
+  color: var(--textColorBase);
+}
+
+
+.pageSectionWrapper {
+  padding-top: var(--paddingTopSection);
 }

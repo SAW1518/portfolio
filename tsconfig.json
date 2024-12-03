@@ -21,7 +21,8 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "src/*": ["./src/*"],
-      "pages/*": ["./src/pages/*"]
+      "pages/*": ["./src/pages/*"],
+      "constants/*": ["./src/constants/*"]
     },
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
