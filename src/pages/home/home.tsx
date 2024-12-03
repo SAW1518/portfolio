@@ -7,28 +7,28 @@ export const Home = () => {
     return (
         <div className={styles.container}>
             <header className={styles.hero}>
-                <section className={styles['hero-names']}>
-                    <h1 className={styles['hero-name']} >Jesus Enrique Uribe Lopez</h1>
-                    <h2 className={styles['hero-subTitle']} >Software Engineer - JavaScript/TypeScript</h2>
-                    <h4 className={styles['hero-skills']}>Specializing in React.js, Next.js, Tailwind CSS, and the MERN Stack.</h4>
+                <section className={styles.heroNames}>
+                    <h1 className={styles.heroName} >Jesus Enrique Uribe Lopez</h1>
+                    <h2 className={styles.subTitle} >Software Engineer - JavaScript/TypeScript</h2>
+                    <h4 className={styles.heroSkills}>Specializing in React.js, Next.js, Tailwind CSS, and the MERN Stack.</h4>
                 </section>
-                <div className={styles['hero-social']} >
-                    <section aria-description="socil links" className={styles['hero-socia-links']} >
+                <div className={styles.heroSocial} >
+                    <section aria-description="socil links" className={styles.heroSociaLinks}>
                         <a target="_blank" href="https://www.linkedin.com/in/jesus-enrique-ul" >
-                            <LinkedinIcon className={styles['hero-socia-icon']} />
+                            <LinkedinIcon className={styles.heroSociaIcon} />
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/jesus-enrique-uribe-lopez-486584228/?locale=en_US" >
-                            <MailboxIcon className={styles['hero-socia-icon']} />
+                            <MailboxIcon className={styles.heroSociaIcon} />
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/jesus-enrique-uribe-lopez-486584228/?locale=en_US" >
-                            <GithubIcon className={styles['hero-socia-icon']} />
+                            <GithubIcon className={styles.heroSociaIcon} />
                         </a>
                     </section>
                 </div>
             </header>
             <section  >
-                <h3 className={styles['section-title']}>Skills</h3>
-                <div className={styles['skills-container']}>
+                <h3 className={styles.sectionTitle}>Skills</h3>
+                <div className={styles.skillsContainer}>
                     {Skills.map((item) => (
                         <p key={item.toString()}>
                             <span>{item}</span>
@@ -37,9 +37,9 @@ export const Home = () => {
                 </div>
             </section>
             <section>
-                <h3 className={styles['section-title']}>Contact Information</h3>
-                <h4 className={styles['hero-skills']}>Email: contactojesusenriqueul@gmail.com</h4>
-                <h4 className={styles['hero-skills']}>LinkedIn: linkedin.com/in/jesus-enrique-ul</h4>
+                <h3 className={styles.sectionTitle}>Contact Information</h3>
+                <h4 className={styles.heroSkills}>Email: contactojesusenriqueul@gmail.com</h4>
+                <h4 className={styles.heroSkills}>LinkedIn: linkedin.com/in/jesus-enrique-ul</h4>
                 <h4 className={styles.heroSkills}>GitHub: github.com/johndoe</h4>
             </section>
         </div>
