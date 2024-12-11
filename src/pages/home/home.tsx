@@ -1,4 +1,4 @@
-import { TitleSection } from "src/components";
+import { SubTitleLink, TitleSection } from "src/components";
 import styles from "./home.module.css";
 import { Skills } from "src/constants";
 import { LinkedinIcon, MailboxIcon, GithubIcon } from "src/icons";
@@ -29,7 +29,6 @@ export const Home = () => {
                 </div>
             </header>
             <section className={styles.pageSectionWrapper}>
-                {/* <h3 className={styles.sectionTitle}>Skills</h3> */}
                 <TitleSection tag="h3" title="Skills" />
                 <div className={styles.skillsGrid}>
                     {Skills.map((item) => (
@@ -40,10 +39,10 @@ export const Home = () => {
                 </div>
             </section>
             <section className={styles.pageSectionWrapper}>
-                <TitleSection tag="h3" title="Contact Informatio" />
-                <h4 className={styles.contactInfo}>Email: contactojesusenriqueul@gmail.com</h4>
-                <h4 className={styles.contactInfo}>LinkedIn: linkedin.com/in/jesus-enrique-ul</h4>
-                <h4 className={styles.contactInfo}>GitHub: github.com/johndoe</h4>
+                <TitleSection tag="h3" title="Contact Information" />
+                <SubTitleLink text="Email: contactojesusenriqueul@gmail.com" icon="Copy"  buttonProps={{onClick: ()=> console.log('Email')}} />
+                <SubTitleLink text="LinkedIn: linkedin.com/in/jesus-enrique-ul" icon="OpenExternalLink" linkProps={{ target: '_blank', href: 'https://www.linkedin.com/in/jesus-enrique-ul' }} />
+                <SubTitleLink text="GitHub: github.com/johndoe" icon="OpenExternalLink" linkProps={{ target: '_blank', href: 'https://www.linkedin.com/in/jesus-enrique-ul' }}  />
             </section>
         </div>
     );

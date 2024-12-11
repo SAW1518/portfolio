@@ -73,12 +73,16 @@
   border-radius: 999px;
 }
 
-.contactInfo {
-  font-size: 1rem;
-  color: var(--textColorBase);
-}
 
 
 .pageSectionWrapper {
-  padding-top: var(--paddingTopSection);
+  padding-block-start: var(--paddingTopSection);
+}
+
+.pageSectionWrapper > p {
+  padding-left: .3rem ;
+}
+
+.pageSectionWrapper > div {
+  padding-left: .3rem ;
 }

@@ -1,5 +1,6 @@
 @import './fonts.css';
 @import './body.css';
+@import './css_reset.css';
 
 :root {
     --basefontFamly: Avenir, Helvetica, sans-serif;
