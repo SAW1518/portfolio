@@ -73,16 +73,14 @@
   border-radius: 999px;
 }
 
-
-
 .pageSectionWrapper {
   padding-block-start: var(--paddingTopSection);
 }
 
 .pageSectionWrapper > p {
-  padding-left: .3rem ;
+  padding-left: 0.3rem;
 }
 
 .pageSectionWrapper > div {
-  padding-left: .3rem ;
+  padding-left: 0.3rem;
 }

@@ -1,32 +1,31 @@
 .contactInfo {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
 }
-
 
 .contactInfoTitule {
-    color: var(--textColorHeading);
-    font-family: var(--baseFont);
-    font-weight: 500;
-    font-size: 1.3rem;
-    color: var(--textColorBase);
+  color: var(--textColorHeading);
+  font-family: var(--baseFont);
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--textColorBase);
 }
-  
+
 .icon {
-    height: 1rem;
-    width: 1rem;
-    color: rgb(255, 255, 255);
-    padding-bottom: 5px;
+  height: 1rem;
+  width: 1rem;
+  color: rgb(255, 255, 255);
+  padding-bottom: 5px;
 }
 
 button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font: inherit;
-    color: inherit;
-    cursor: pointer;
-    outline: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
 }

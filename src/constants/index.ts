@@ -1,1 +1,1 @@
-export { Skills } from './skils.constants';
+export { Skills } from "./skils.constants";

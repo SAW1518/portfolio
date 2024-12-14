@@ -1,8 +1,8 @@
-import { Home } from 'src/pages';
-import './styles/globalStyles.css'
+import { Home } from "src/pages";
+import "./styles/globalStyles.css";
 
 function App() {
-  return <Home />
+  return <Home />;
 }
 
-export default App
+export default App;
