@@ -19,8 +19,19 @@ module.exports = {
     sourceType: "module",
     project: "./tsconfig.json",
   },
-  plugins: ["react-refresh", "react", "@typescript-eslint", "prettier"],
+  plugins: [
+    "react-refresh",
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "stylelint-css-modules",
+  ],
+  resolve: {
+    extensions: [".css"],
+  },
   rules: {
+    "css-modules/composed-class-names": true,
+    "css-modules/css-variables": true,
     "react/react-in-jsx-scope": ["off"],
     "react/jsx-uses-react": ["off"],
     "react/jsx-props-no-spreading": ["warn"],
