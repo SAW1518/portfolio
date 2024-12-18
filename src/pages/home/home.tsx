@@ -1,4 +1,4 @@
-import { SubTitleLink, TitleSection } from "src/components";
+import { Alert, SubTitleLink, TitleSection } from "src/components";
 import styles from "./home.module.css";
 import { Skills } from "src/constants";
 import { LinkedinIcon, MailboxIcon, GithubIcon } from "src/icons";
@@ -17,7 +17,7 @@ export const Home = () => {
           </h4>
         </section>
         <div className={styles.socialLinksWrapper}>
-          <section 
+          <section
             aria-description="social links"
             className={styles.socialLinks}
           >
@@ -34,7 +34,7 @@ export const Home = () => {
               target="_blank"
               href="https://www.linkedin.com/in/jesus-enrique-uribe-lopez-486584228/?locale=en_US"
             >
-              <GithubIcon  className={styles.icon} />
+              <GithubIcon className={styles.icon} />
             </a>
           </section>
         </div>
@@ -73,6 +73,7 @@ export const Home = () => {
           }}
         />
       </section>
+      <Alert />
     </div>
   );
 };

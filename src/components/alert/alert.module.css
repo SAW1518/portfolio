@@ -1,0 +1,10 @@
+.alertContainer {
+  display: flex;
+
+
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: rgb(55, 65, 81);
+  padding: 1.25rem;
+  border-radius: 0.5rem
+}
