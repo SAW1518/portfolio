@@ -1,9 +1,9 @@
 .alertContainer {
   display: flex;
   position: absolute;
-  top: 0%; 
-  right: 0%; 
-  transform: translate(-50%, 50%); 
+  bottom: 0%;
+  right: 0%;
+  transform: translate(-5%, -30%);
   flex-direction: column;
   gap: 0.25rem;
   background-color: rgb(55, 65, 81);
