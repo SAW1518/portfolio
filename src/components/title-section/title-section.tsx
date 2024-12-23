@@ -8,6 +8,8 @@ interface TitleSectionType {
 export const TitleSection = ({ tag, title }: TitleSectionType) => {
   const HeaderComponent = tag;
   return (
-    <HeaderComponent className={styles.sectionTitle}>{title}</HeaderComponent>
+    <HeaderComponent className={tag === "h3" ? styles.sectionTitle : styles.sectionSubTitle}>
+      {title}
+    </HeaderComponent>
   );
 };

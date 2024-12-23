@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 import { ExternalLinkIcon, CopyIcon } from "src/icons";
-import styles from "./subTitle-link.module.css";
+import styles from "./sub-title-link.module.css";
 
 interface SubTitleLinkProps {
   text: string;

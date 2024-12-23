@@ -1,5 +1,16 @@
 .sectionTitle {
+  font-weight: 700;
   font-size: 2rem;
+  line-height: 1.75rem;
+  color: var(--textColorHeading);
+  margin-top: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+
+.sectionSubTitle {
+  font-weight: 500;
+  font-size: 1.50rem;
   line-height: 1.75rem;
   color: var(--textColorHeading);
   margin-top: 0.5rem;
