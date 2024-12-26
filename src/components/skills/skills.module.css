@@ -1,0 +1,18 @@
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block-start: 0.4rem;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(31 41 55 / 1);
+  line-height: 0.8rem;
+  font-weight: 900;
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
+  border-radius: 999px;
+}

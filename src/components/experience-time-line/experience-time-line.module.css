@@ -1,17 +1,6 @@
 .experienceListWrapper {
   position: relative;
-  margin-top: 2rem;
-}
-
-.circule {
-  position: absolute;
-  background-color: rgb(37 99 235);
-  left: -0.25rem;
-  top: 2rem;
-  height: 0.5rem;
-  width: 0.5rem;
-  transform: translate(-100%, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
-  border-radius: 9999px;
+  margin-top: 1rem;
 }
 
 .line {
@@ -21,34 +10,4 @@
   bottom: 0.75rem;
   width: 1px;
   background-color: rgb(55 65 81);
-}
-
-.companyWrapper {
-  display: flex;
-  position: relative;
-  gap: 1.5rem;
-}
-
-.imageContainer {
-  position: relative;
-}
-
-.experienceImage {
-  border-radius: 0.5rem;
-  border-width: 1px;
-  border-color: rgb(55 65 81);
-  background-color: rgb(31 41 55);
-}
-
-.companyInfo {
-  flex: 1 1 0%;
-}
-
-.companyAndTime {
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1rem;
-  color: var(--textColorBase);
-  margin-top: 0.5rem;
-  margin-block-end: 0.5rem;
 }

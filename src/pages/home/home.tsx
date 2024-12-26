@@ -1,6 +1,6 @@
-import { Alert, SubTitleLink, TitleSection, ExperienceTimeLine } from "src/components";
+import { Alert, SubTitleLink, TitleSection, ExperienceTimeLine, Skills } from "src/components";
 import styles from "./home.module.css";
-import { Skills } from "src/constants";
+import { SkillsList } from "src/constants";
 import { LinkedinIcon, MailboxIcon, GithubIcon } from "src/icons";
 import { copy } from "src/utils";
 import { useAlert } from "src/hooks";
@@ -40,13 +40,7 @@ export const Home = () => {
       </header>
       <section className={styles.pageSectionWrapper}>
         <TitleSection tag="h3" title="Skills" />
-        <div className={styles.skillsGrid}>
-          {Skills.map((item) => (
-            <p key={item.toString()} className={styles.skillItem}>
-              <span>{item}</span>
-            </p>
-          ))}
-        </div>
+        <Skills skills={SkillsList} />
       </section>
       <section className={styles.pageSectionWrapper}>
         <TitleSection tag="h3" title="Contact Information" />

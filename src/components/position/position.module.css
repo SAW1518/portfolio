@@ -1,0 +1,21 @@
+.companyAndTime {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  font-weight: 300;
+  line-height: 1rem;
+  color: var(--textColorBase);
+  margin-top: 0.4rem;
+  margin-inline-end: 1rem;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+  margin-block-end: 0.3rem;
+}
+
+.dateAndLocationWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
