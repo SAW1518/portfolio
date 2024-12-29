@@ -19,3 +19,15 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.proyectsWrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin-block-start: 1rem;
+}
+
+.imgContainer {
+  border-color: rgb(55 65 81);
+  border-radius: 0.5rem;
+}

@@ -16,3 +16,8 @@
   padding-inline: 0.5rem;
   border-radius: 999px;
 }
+
+.skillItem:hover {
+  background-color: rgb(37 99 235);
+
+}

@@ -31,7 +31,12 @@
   flex: 1 1 0%;
 }
 
+@media (width > 1024px) {
+  .companyInfo {
+    max-width: 950px;
+  }
+}
+
 .companyInfo > h4 {
   margin-top: 1.2rem;
 }
-

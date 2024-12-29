@@ -1,25 +1,16 @@
-import styles from "./experience-company.module.css";
-import { Position, PositionType } from "../position/position";
+import styles from './experience-company.module.css';
+import { Position, PositionProps } from '../position/position';
 
-interface ExperienceCompanyProps {
+export interface ExperienceCompanyProps {
   imageSrc: string;
   imageAlt: string;
-  experienceCompanyList?: PositionType[];
+  positionList?: PositionProps[];
 }
 
-const foo: PositionType[] = [
-  {
-    position: "Software Engineer - JavaScript",
-    companyNameAndTime: "EPAM Systems · Full-time",
-    dates: "Mar 2024 - Present · 10 months Guadalajara, Jalisco",
-    location: "Guadalajara, Jalisco, México · Remote",
-    positionDescription: "Frontend developer for Expedia group Login and Profile Teams",
-    skills: ["React", "Jest", "Cypress", "Jest"],
-  },
-];
+
 
 export const ExperienceCompany = (prop: ExperienceCompanyProps) => {
-  const { imageSrc, imageAlt } = prop;
+  const { imageSrc, imageAlt, positionList } = prop;
   return (
     <article className={styles.companyWrapper}>
       <div className={styles.imageContainer}>
@@ -34,7 +25,7 @@ export const ExperienceCompany = (prop: ExperienceCompanyProps) => {
         <div className={styles.circule} />
       </div>
       <div className={styles.companyInfo}>
-        {foo.map((position) => (
+        {positionList?.map((position) => (
           <Position {...position} key={position.positionDescription} />
         ))}
       </div>

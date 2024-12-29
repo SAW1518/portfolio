@@ -1,15 +1,16 @@
-import styles from "./position.module.css";
-import { CalendarIcon, LocationIcon } from "src/icons";
-import { TitleSection } from "../title-section/title-section";
-import { Skills } from "../skills/skills";
+import styles from './position.module.css';
+import { CalendarIcon, LocationIcon } from 'src/icons';
+import { TitleSection } from '../title-section/title-section';
+import { Skills } from '../skills/skills';
 
-export interface PositionType {
+export interface PositionProps {
   position: string;
   companyNameAndTime: string;
   dates: string;
   location: string;
   positionDescription: string;
   skills?: string[];
+  images?: string[];
 }
 
 export const Position = ({
@@ -19,7 +20,8 @@ export const Position = ({
   location,
   positionDescription,
   skills,
-}: PositionType) => {
+  images,
+}: PositionProps) => {
   return (
     <>
       <TitleSection tag="h4" title={position} />
@@ -35,7 +37,11 @@ export const Position = ({
       </div>
       <p className={styles.companyAndTime}>{positionDescription}</p>
       <Skills skills={skills} />
+      <section className={styles.proyectsWrapper}>
+        {images?.map((item) => (
+          <img src={item} className={styles.imgContainer} />
+        ))}
+      </section>
     </>
   );
 };
-
