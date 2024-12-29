@@ -82,7 +82,7 @@ export const ExperienceTimeLine = () => {
     <section className={styles.experienceListWrapper}>
       <div className={styles.line} />
       {foo.map((EC) => (
-        <ExperienceCompany {...EC} />
+        <ExperienceCompany {...EC} key={EC.imageAlt} />
       ))}
     </section>
   );

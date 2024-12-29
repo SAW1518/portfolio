@@ -39,7 +39,7 @@ export const Position = ({
       <Skills skills={skills} />
       <section className={styles.proyectsWrapper}>
         {images?.map((item) => (
-          <img src={item} className={styles.imgContainer} />
+          <img src={item} className={styles.imgContainer} key={item} />
         ))}
       </section>
     </>

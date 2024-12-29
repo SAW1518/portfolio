@@ -2,7 +2,7 @@
   background: #111827;
   min-height: 100dvh;
   color: rgb(255, 255, 255);
-  padding-inline: 5rem;
+  padding-inline: 1rem;
 }
 
 .header {
@@ -84,4 +84,27 @@
 
 .pageSectionWrapper > div {
   padding-left: 0.3rem;
+}
+
+@media (min-width: 640px) {
+  .pageWrapper {
+    padding-inline: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .pageWrapper {
+    padding-inline: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pageWrapper {
+    padding-inline: 4rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .pageWrapper {
+    padding-inline: 5rem;
+  }
 }
