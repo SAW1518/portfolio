@@ -1,15 +1,15 @@
-import { Alert, SubTitleLink, TitleSection, ExperienceTimeLine, Skills } from 'src/components';
-import styles from './home.module.css';
-import { SkillsList } from 'src/constants';
-import { LinkedinIcon, MailboxIcon, GithubIcon } from 'src/icons';
-import { copy } from 'src/utils';
-import { useAlert } from 'src/hooks';
+import { Alert, SubTitleLink, TitleSection, ExperienceTimeLine, Skills } from "src/components";
+import styles from "./home.module.css";
+import { SkillsList } from "src/constants";
+import { LinkedinIcon, MailboxIcon, GithubIcon } from "src/icons";
+import { copy } from "src/utils";
+import { useAlert } from "src/hooks";
 
 export const Home = () => {
   const { show } = useAlert();
 
   const copyOnClick = () =>
-    copy({ newClip: 'contactojesusenriqueul@gmail.com', onSuccessCallBack: show });
+    copy({ newClip: "contactojesusenriqueul@gmail.com", onSuccessCallBack: show });
 
   return (
     <div id="pageWrapper" className={styles.pageWrapper}>
@@ -53,16 +53,16 @@ export const Home = () => {
           text="LinkedIn: linkedin.com/in/jesus-enrique-ul"
           icon="OpenExternalLink"
           linkProps={{
-            target: '_blank',
-            href: 'https://www.linkedin.com/in/jesus-enrique-ul',
+            target: "_blank",
+            href: "https://www.linkedin.com/in/jesus-enrique-ul",
           }}
         />
         <SubTitleLink
           text="GitHub: github.com/SAW1518"
           icon="OpenExternalLink"
           linkProps={{
-            target: '_blank',
-            href: 'https://github.com/SAW1518',
+            target: "_blank",
+            href: "https://github.com/SAW1518",
           }}
         />
       </section>

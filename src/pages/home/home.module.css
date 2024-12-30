@@ -103,8 +103,9 @@
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1024px) {
   .pageWrapper {
     padding-inline: 5rem;
   }
 }
+
