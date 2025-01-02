@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { AlertProvidersContext, AlertProviders } from 'src/providers';
-import { useContext, useEffect } from 'react';
+import { AlertProvidersContext } from 'src/providers';
+import { useContext } from 'react';
 import { act, render, renderHook } from '@testing-library/react';
 
 const TestComponent = () => {
@@ -26,12 +26,10 @@ const useTestHook = () => {
 
 describe('<AlertProvidersContext/>', () => {
   beforeEach(() => {
-    // Activar temporizadores falsos para controlar setInterval
     vi.useFakeTimers();
   });
 
   afterEach(() => {
-    // Restaurar temporizadores reales después de cada prueba
     vi.useRealTimers();
   });
   it('should provide the context', () => {

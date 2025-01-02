@@ -2,7 +2,6 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 
-// Mock de Home para simplificar la prueba
 vi.mock('src/pages', () => ({
   Home: () => <div>Home Component</div>,
 }));
