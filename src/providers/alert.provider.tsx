@@ -1,6 +1,6 @@
-import { createContext, ReactNode, useMemo, useState, useCallback, useEffect } from "react";
+import { createContext, ReactNode, useMemo, useState, useCallback, useEffect } from 'react';
 
-interface AlertProvidersType {
+export interface AlertProvidersType {
   showAlert: boolean;
   // setShowAlert: Dispatch<SetStateAction<boolean>>;
   show: () => void;
@@ -29,5 +29,7 @@ export const AlertProviders = ({ children }: { children: ReactNode }) => {
     }),
     [showAlert, show],
   );
-  return <AlertProvidersContext.Provider value={contexValues}>{children}</AlertProvidersContext.Provider>;
+  return (
+    <AlertProvidersContext.Provider value={contexValues}>{children}</AlertProvidersContext.Provider>
+  );
 };

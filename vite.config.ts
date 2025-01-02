@@ -5,7 +5,12 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   test: {
+    
     environment: 'happy-dom',
+    coverage: {
+      exclude: ['src/mocks', 'src/constants', 'src/types', 'src/icons'],
+      provider: 'istanbul',
+    },
   },
   plugins: [react()],
   resolve: {
