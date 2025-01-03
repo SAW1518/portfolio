@@ -24,7 +24,7 @@ export const Position = ({
 }: PositionProps) => {
   return (
     <>
-      <TitleSection tag="h4" title={position} />
+      <TitleSection  tag="h4" title={position} />
       <p className={styles.companyAndTime}>{companyNameAndTime}</p>
       <div className={styles.dateAndLocationWrapper}>
         <p className={styles.companyAndTime}>

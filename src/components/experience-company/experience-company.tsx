@@ -7,8 +7,6 @@ export interface ExperienceCompanyProps {
   positionList?: PositionProps[];
 }
 
-
-
 export const ExperienceCompany = (prop: ExperienceCompanyProps) => {
   const { imageSrc, imageAlt, positionList } = prop;
   return (

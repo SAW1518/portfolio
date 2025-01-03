@@ -8,7 +8,7 @@ export default defineConfig({
     
     environment: 'happy-dom',
     coverage: {
-      exclude: ['src/mocks', 'src/constants', 'src/types', 'src/icons'],
+      exclude: ['src/mocks', 'src/constants', 'src/types', 'src/icons', '.eslintrc.js', 'vite.config.ts'],
       provider: 'istanbul',
     },
   },
