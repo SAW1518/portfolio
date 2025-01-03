@@ -1,5 +1,5 @@
+import { Position, PositionProps } from 'src/components';
 import styles from './experience-company.module.css';
-import { Position, PositionProps } from '../position/position';
 
 export interface ExperienceCompanyProps {
   imageSrc: string;

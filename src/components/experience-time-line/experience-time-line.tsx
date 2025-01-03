@@ -1,5 +1,6 @@
-import styles from './experience-time-line.module.css';
 import { ExperienceCompany, ExperienceCompanyProps } from 'src/components';
+import styles from './experience-time-line.module.css';
+
 
 const foo: ExperienceCompanyProps[] = [
   {

@@ -2,9 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { ExperienceCompany, ExperienceCompanyProps } from "../experience-company";
 
-
-// Mock del componente `Position`
-vi.mock("../position/position", () => ({
+vi.mock("./src/components", () => ({
   Position: ({ positionDescription }: { positionDescription: string }) => (
     <div data-testid="position">{positionDescription}</div>
   ),
@@ -46,7 +44,6 @@ describe("ExperienceCompany Component", () => {
 
   it("should render no positions if positionList is empty", () => {
     render(<ExperienceCompany imageSrc="https://example.com/logo.png" imageAlt="Company Logo" />);
-
     const positions = screen.queryByTestId("position");
     expect(positions).toBeNull();
   });
