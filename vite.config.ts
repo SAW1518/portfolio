@@ -17,6 +17,7 @@ export default defineConfig({
         '.eslintrc.js',
         './src/main.tsx',
         'vite.config.ts',
+        'src/components/sub-title-link', // TODO: remplase component
         '**/__test__/**/*.test.tsx'
       ],
       

@@ -9,3 +9,4 @@ export { Position } from './position/position';
 // Types
 export type { PositionProps } from './position/position';
 export type { ExperienceCompanyProps } from './experience-company/experience-company';
+export type { SkillsProps } from './skills/skills';

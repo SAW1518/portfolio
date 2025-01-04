@@ -18,6 +18,18 @@ const TestComponentRuningShow = () => {
     </div>
   );
 };
+const TestComponents = () => {
+  const { showAlert, show } = useContext(AlertProvidersContext);
+
+  return (
+    <div>
+      <p data-testid="alert-state">{showAlert ? 'Visible' : 'Hidden'}</p>
+      <button onClick={show} data-testid="show-alert-button">
+        Show Alert
+      </button>
+    </div>
+  );
+};
 
 const useTestHook = () => {
   const { show, showAlert } = useContext(AlertProvidersContext);

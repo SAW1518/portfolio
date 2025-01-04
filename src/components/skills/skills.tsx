@@ -1,6 +1,6 @@
 import styles from "./skills.module.css";
 
-interface SkillsProps {
+export interface SkillsProps {
   skills?: string[];
 }
 
