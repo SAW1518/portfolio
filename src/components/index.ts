@@ -5,6 +5,7 @@ export { ExperienceTimeLine } from './experience-time-line/experience-time-line'
 export { ExperienceCompany } from './experience-company/experience-company';
 export { Skills } from './skills/skills';
 export { Position } from './position/position';
+export { ButtonLink } from './button-link/button-link';
 
 // Types
 export type { PositionProps } from './position/position';

@@ -1,4 +1,4 @@
-import { Alert, SubTitleLink, TitleSection, ExperienceTimeLine, Skills } from 'src/components';
+import { Alert, TitleSection, ExperienceTimeLine, Skills, ButtonLink } from 'src/components';
 import styles from './home.module.css';
 import { SkillsList } from 'src/constants';
 import { LinkedinIcon, MailboxIcon, GithubIcon } from 'src/icons';
@@ -21,19 +21,6 @@ export const Home = () => {
             Specializing in React.js, Next.js, Tailwind CSS, and the MERN Stack.
           </h4>
         </section>
-        <div className={styles.socialLinksWrapper}>
-          <section aria-description="social links" className={styles.socialLinks}>
-            <a target="_blank" href="https://www.linkedin.com/in/jesus-enrique-ul">
-              <LinkedinIcon className={styles.icon} />
-            </a>
-            <a target="_blank" href="mailto:contactojesusenriqueul@gmail.com">
-              <MailboxIcon className={styles.icon} />
-            </a>
-            <a target="_blank" href="https://github.com/SAW1518">
-              <GithubIcon className={styles.icon} />
-            </a>
-          </section>
-        </div>
       </header>
       <section className={styles.pageSectionWrapper}>
         <TitleSection tag="h3" title="Skills" />
@@ -41,7 +28,37 @@ export const Home = () => {
       </section>
       <section className={styles.pageSectionWrapper}>
         <TitleSection tag="h3" title="Contact Information" />
-        <SubTitleLink
+        <div className={styles.contactInfo}>
+          <ButtonLink
+            type="btn"
+            leftIcon="email"
+            rightIcon="copy"
+            text="contactojesusenriqueul@gmail.com"
+            buttonProps={{ onClick: copyOnClick }}
+          />
+          <ButtonLink
+            type="link"
+            leftIcon="linkedin"
+            rightIcon="link"
+            text="linkedin.com/in/jesus-enrique-ul"
+            anchorProps={{
+              target: '_blank',
+              href: 'https://www.linkedin.com/in/jesus-enrique-ul',
+            }}
+          />
+
+          <ButtonLink
+            type="link"
+            leftIcon="git"
+            rightIcon="link"
+            text="github.com/SAW1518"
+            anchorProps={{
+              target: '_blank',
+              href: 'https://github.com/SAW1518',
+            }}
+          />
+        </div>
+        {/* <SubTitleLink
           text="Email: contactojesusenriqueul@gmail.com"
           icon="Copy"
           buttonProps={{ onClick: copyOnClick }}
@@ -61,7 +78,7 @@ export const Home = () => {
             target: '_blank',
             href: 'https://github.com/SAW1518',
           }}
-        />
+        /> */}
       </section>
       <section className={styles.pageSectionWrapper}>
         <TitleSection tag="h3" title="Experience" />
