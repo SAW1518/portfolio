@@ -1,7 +1,6 @@
 import { Alert, TitleSection, ExperienceTimeLine, Skills, ButtonLink } from 'src/components';
 import styles from './home.module.css';
 import { SkillsList } from 'src/constants';
-import { LinkedinIcon, MailboxIcon, GithubIcon } from 'src/icons';
 import { copy } from 'src/utils';
 import { useAlert } from 'src/hooks';
 
