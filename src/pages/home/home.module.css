@@ -93,6 +93,18 @@
   margin-block-start: 0.4rem;
 }
 
+.sectionSubTitle {
+  font-weight: 500;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: var(--textColorHeading);
+}
+
+.contactandEducation {
+  display: grid;
+  gap: 3rem;
+}
 
 @media (min-width: 640px) {
   .pageWrapper {
@@ -102,6 +114,9 @@
 @media (min-width: 768px) {
   .pageWrapper {
     padding-inline: 3rem;
+  }
+  .contactandEducation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

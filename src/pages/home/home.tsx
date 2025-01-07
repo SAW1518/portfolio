@@ -15,7 +15,7 @@ export const Home = () => {
       <header className={styles.header}>
         <section>
           <h1 className={styles.mainHeading}>Jesus Enrique Uribe Lopez</h1>
-          <h2 className={styles.subHeading}>Software Engineer - JavaScript/TypeScript</h2>
+          <h3 className={styles.subHeading}>Software Engineer - JavaScript/TypeScript</h3>
           <h4 className={styles.skillsDescription}>
             Specializing in React.js, Next.js, Tailwind CSS, and the MERN Stack.
           </h4>
@@ -25,60 +25,45 @@ export const Home = () => {
         <TitleSection tag="h3" title="Skills" />
         <Skills skills={SkillsList} />
       </section>
-      <section className={styles.pageSectionWrapper}>
-        <TitleSection tag="h3" title="Contact Information" />
-        <div className={styles.contactInfo}>
-          <ButtonLink
-            type="btn"
-            leftIcon="email"
-            rightIcon="copy"
-            text="contactojesusenriqueul@gmail.com"
-            buttonProps={{ onClick: copyOnClick }}
-          />
-          <ButtonLink
-            type="link"
-            leftIcon="linkedin"
-            rightIcon="link"
-            text="linkedin.com/in/jesus-enrique-ul"
-            anchorProps={{
-              target: '_blank',
-              href: 'https://www.linkedin.com/in/jesus-enrique-ul',
-            }}
-          />
-
-          <ButtonLink
-            type="link"
-            leftIcon="git"
-            rightIcon="link"
-            text="github.com/SAW1518"
-            anchorProps={{
-              target: '_blank',
-              href: 'https://github.com/SAW1518',
-            }}
-          />
-        </div>
-        {/* <SubTitleLink
-          text="Email: contactojesusenriqueul@gmail.com"
-          icon="Copy"
-          buttonProps={{ onClick: copyOnClick }}
-        />
-        <SubTitleLink
-          text="LinkedIn: linkedin.com/in/jesus-enrique-ul"
-          icon="OpenExternalLink"
-          linkProps={{
-            target: '_blank',
-            href: 'https://www.linkedin.com/in/jesus-enrique-ul',
-          }}
-        />
-        <SubTitleLink
-          text="GitHub: github.com/SAW1518"
-          icon="OpenExternalLink"
-          linkProps={{
-            target: '_blank',
-            href: 'https://github.com/SAW1518',
-          }}
-        /> */}
-      </section>
+      <div className={styles.contactandEducation}>
+        <section className={styles.pageSectionWrapper}>
+          <TitleSection tag="h3" title="Contact Information" />
+          <div className={styles.contactInfo}>
+            <ButtonLink
+              type="btn"
+              leftIcon="email"
+              rightIcon="copy"
+              text="contactojesusenriqueul@gmail.com"
+              buttonProps={{ onClick: copyOnClick }}
+            />
+            <ButtonLink
+              type="link"
+              leftIcon="linkedin"
+              rightIcon="link"
+              text="linkedin.com/in/jesus-enrique-ul"
+              anchorProps={{
+                target: '_blank',
+                href: 'https://www.linkedin.com/in/jesus-enrique-ul',
+              }}
+            />
+            <ButtonLink
+              type="link"
+              leftIcon="git"
+              rightIcon="link"
+              text="github.com/SAW1518"
+              anchorProps={{
+                target: '_blank',
+                href: 'https://github.com/SAW1518',
+              }}
+            />
+          </div>
+        </section>
+        <section className={styles.pageSectionWrapper}>
+          <TitleSection tag="h3" title="Education" />
+          <h3 className={styles.sectionSubTitle}>Tecnológico Mario Molina</h3>
+          <h4 className={styles.skillsDescription}>Systems Engineering, Software Engineering</h4>
+        </section>
+      </div>
       <section className={styles.pageSectionWrapper}>
         <TitleSection tag="h3" title="Experience" />
         <ExperienceTimeLine />
