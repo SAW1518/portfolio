@@ -61,7 +61,7 @@ export const Home = () => {
         <section className={styles.pageSectionWrapper}>
           <TitleSection tag="h3" title="Education" />
           <h3 className={styles.sectionSubTitle}>Tecnológico Mario Molina</h3>
-          <h4 className={styles.skillsDescription}>Systems Engineering, Software Engineering</h4>
+          <h4 className={styles.skillsDescription}>Systems Engineering</h4>
         </section>
       </div>
       <section className={styles.pageSectionWrapper}>

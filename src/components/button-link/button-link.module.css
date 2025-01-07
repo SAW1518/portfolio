@@ -1,5 +1,5 @@
 .contactButton {
- display: flex;
+  display: flex;
   gap: 0.5rem;
   color: rgba(209, 213, 219);
   background-color: rgba(30, 58, 138);
@@ -12,6 +12,7 @@
   transition-property: background-color, text-decoration-color;
   transition-duration: 150ms;
 }
+
 .contactLink {
   display: flex;
   gap: 0.5rem;
@@ -25,6 +26,11 @@
   padding-block: 0.5rem;
   transition-property: background-color, text-decoration-color;
   transition-duration: 150ms;
+}
+
+.contactButton:hover,
+.contactLink:hover {
+  transform: scale(0.99);
 }
 
 .contactButton:hover {
@@ -49,4 +55,3 @@
   height: 1em;
   width: 1rem;
 }
-
