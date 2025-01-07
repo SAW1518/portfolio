@@ -103,7 +103,6 @@
 
 .contactandEducation {
   display: grid;
-  gap: 3rem;
 }
 
 @media (min-width: 640px) {
@@ -117,6 +116,7 @@
   }
   .contactandEducation {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
   }
 }
 
