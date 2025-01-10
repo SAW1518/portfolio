@@ -17,11 +17,11 @@ export interface PositionProps {
 export const Position = (props: PositionProps) => {
   const { position, companyNameAndTime, dates, location, positionDescription, skills, images } =
     props;
-  const [showCarousel, setShowCarousel] = useState<{ images: string[] }>({ images: [] });
+  const [showCarousel, /* setShowCarousel */] = useState<{ images: string[] }>({ images: [] });
 
-  const openCarousel = useCallback((images: string[]) => {
-    setShowCarousel({ images });
-  }, []);
+  // const openCarousel = useCallback((images: string[]) => {
+  //   setShowCarousel({ images });
+  // }, []);
 
   return (
     <>
@@ -42,7 +42,7 @@ export const Position = (props: PositionProps) => {
         {images?.map((item) => (
           <button
             onClick={() => {
-              openCarousel(images);
+              // openCarousel(images);
             }}
             className={styles.btnContainerImage}
           >
