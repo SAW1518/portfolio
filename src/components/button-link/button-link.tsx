@@ -1,8 +1,15 @@
-import { CopyIcon, ExternalLinkIcon, MailboxIcon, LinkedinIcon, GithubIcon } from 'src/icons';
+import {
+  CopyIcon,
+  ExternalLinkIcon,
+  MailboxIcon,
+  LinkedinIcon,
+  GithubIcon,
+  PhoneIcon,
+} from 'src/icons';
 import styles from './button-link.module.css';
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, HTMLAttributes } from 'react';
 
-type IconType = 'email' | 'copy' | 'linkedin' | 'link' | 'git';
+type IconType = 'email' | 'copy' | 'linkedin' | 'link' | 'git' | 'phone';
 
 const Wrappers: Record<'btn' | 'link', 'button' | 'a'> = {
   btn: 'button',
@@ -15,6 +22,7 @@ const Icon: Record<IconType, JSX.Element | null> = {
   link: <ExternalLinkIcon className={styles.icon} />,
   linkedin: <LinkedinIcon className={styles.icon} />,
   git: <GithubIcon className={styles.icon} />,
+  phone: <PhoneIcon className={styles.icon} />,
 };
 export interface ButtonLinkProps {
   text: string;

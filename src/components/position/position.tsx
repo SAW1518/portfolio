@@ -1,7 +1,8 @@
 import styles from './position.module.css';
 import { CalendarIcon, LocationIcon } from 'src/icons';
-import { TitleSection } from '../title-section/title-section';
 import { Skills } from '../skills/skills';
+import { ProjectsCarousel, TitleSection } from 'src/components';
+import { useCallback, useState } from 'react';
 
 export interface PositionProps {
   position: string;
@@ -13,15 +14,15 @@ export interface PositionProps {
   images?: string[];
 }
 
-export const Position = ({
-  position,
-  companyNameAndTime,
-  dates,
-  location,
-  positionDescription,
-  skills,
-  images,
-}: PositionProps) => {
+export const Position = (props: PositionProps) => {
+  const { position, companyNameAndTime, dates, location, positionDescription, skills, images } =
+    props;
+  const [showCarousel, setShowCarousel] = useState<{ images: string[] }>({ images: [] });
+
+  const openCarousel = useCallback((images: string[]) => {
+    setShowCarousel({ images });
+  }, []);
+
   return (
     <>
       <TitleSection tag="h4" title={position} />
@@ -39,8 +40,12 @@ export const Position = ({
       <Skills skills={skills} />
       <section className={styles.proyectsWrapper}>
         {images?.map((item) => (
-          <button className={styles.btnContainerImage}>
-          
+          <button
+            onClick={() => {
+              openCarousel(images);
+            }}
+            className={styles.btnContainerImage}
+          >
             <div className={styles.overlayImage}>
               <span className={styles.overlayText}>See more WIP</span>
             </div>
@@ -48,6 +53,7 @@ export const Position = ({
           </button>
         ))}
       </section>
+      <ProjectsCarousel images={showCarousel.images} />
     </>
   );
 };

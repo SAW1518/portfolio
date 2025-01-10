@@ -1,0 +1,87 @@
+.projectsCarouselHoverly {
+  display: flex;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  top: 0%;
+  left: 0%;
+  background-color: rgb(0 0 0 / 0.8);
+  inset: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectsCarouselModal {
+  background-color: rgb(31 41 55);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 64rem;
+}
+
+.projectsCarouselHeader {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+}
+
+.projectsCarouselText {
+  font-weight: 600;
+}
+
+.projectsCarouselMain {
+  display: grid;
+  gap: 1rem;
+}
+
+.projectsCarouselImageContainer {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background-color: black;
+}
+
+.projectsCarouselImage {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  color: transparent;
+  object-fit: contain;
+}
+
+.projectsCarouselDescription {
+  padding: 0.5rem;
+}
+
+.subHeading {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--textColorHeading);
+  margin-top: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+.projectsCarouselPositionDescription {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  font-weight: 300;
+  line-height: 1rem;
+  color: var(--textColorBase);
+  margin-top: 0.4rem;
+  margin-inline-end: 1rem;
+}
+
+@media (min-width: 768px) {
+  .projectsCarouselModal {
+    border-radius: 0.5rem;
+  }
+
+  .projectsCarouselHeader {
+    text-align: left;
+  }
+  .projectsCarouselMain {
+    grid-template-columns: 2fr 1fr;
+  }
+}

@@ -38,6 +38,16 @@ export const Home = () => {
             />
             <ButtonLink
               type="link"
+              leftIcon="phone"
+              rightIcon="link"
+              text="+523881027335"
+              anchorProps={{
+                target: '_blank',
+                href: 'https://api.whatsapp.com/send/?phone=523881027335',
+              }}
+            />
+            <ButtonLink
+              type="link"
               leftIcon="linkedin"
               rightIcon="link"
               text="linkedin.com/in/jesus-enrique-ul"
