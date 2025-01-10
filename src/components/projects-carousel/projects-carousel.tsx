@@ -1,7 +1,6 @@
 import { createPortal } from 'react-dom';
 import styles from './projects-carousel.module.css';
-import { useEffect } from 'react';
-import { TitleSection } from 'src/components';
+
 
 interface ProjectsCarouselProps {
   showCarousel?: boolean;
@@ -9,7 +8,7 @@ interface ProjectsCarouselProps {
   images?: string[];
 }
 
-export const ProjectsCarousel = ({ indexOpen, showCarousel, images }: ProjectsCarouselProps) => {
+export const ProjectsCarousel = ({ images }: ProjectsCarouselProps) => {
   const pageWrapper = document.getElementById('pageWrapper') as Element;
 
   const {
