@@ -20,7 +20,7 @@ export const Position = (props: PositionProps) => {
   const [showCarousel, setShowCarousel] = useState<{ images: string[] }>({ images: [] });
 
   const openCarousel = useCallback((images: string[]) => {
-    // setShowCarousel({ images });
+    setShowCarousel({ images });
   }, []);
 
   return (
