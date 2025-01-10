@@ -2,7 +2,7 @@ import styles from './position.module.css';
 import { CalendarIcon, LocationIcon } from 'src/icons';
 import { Skills } from '../skills/skills';
 import { ProjectsCarousel, TitleSection } from 'src/components';
-import { useCallback, useState } from 'react';
+import { /* useCallback,  */useState } from 'react';
 
 export interface PositionProps {
   position: string;
