@@ -59,7 +59,7 @@ export const Position = (props: PositionProps) => {
             className={styles.btnContainerImage}
           >
             <div className={styles.overlayImage}>
-              <span className={styles.overlayText}>See more WIP</span>
+              <span className={styles.overlayText}>See more</span>
             </div>
             <img src={item.src} className={styles.imgContainer} key={item.src} />
           </button>

@@ -31,9 +31,20 @@
   border-radius: 0.5rem;
 }
 
+@keyframes pulse {
+  10% {
+    opacity: 0.8;
+  }
+}
+
 .btnContainerImage {
   position: relative;
 }
+
+.btnContainerImage:first-child > .overlayImage  {
+  animation: pulse 10s infinite;
+}
+
 .btnContainerImage:hover {
   transform: scale(0.99);
 }
