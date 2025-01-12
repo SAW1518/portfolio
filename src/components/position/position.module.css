@@ -32,8 +32,18 @@
 }
 
 @keyframes pulse {
-  10% {
-    opacity: 0.8;
+  0% {
+    opacity: 25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 50;
+    transform: scale(0.99);
+    
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
   }
 }
 
@@ -42,7 +52,7 @@
 }
 
 .btnContainerImage:first-child > .overlayImage  {
-  animation: pulse 10s infinite;
+  animation: pulse 1s infinite;
 }
 
 .btnContainerImage:hover {
