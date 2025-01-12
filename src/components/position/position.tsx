@@ -1,8 +1,8 @@
 import styles from './position.module.css';
 import { CalendarIcon, LocationIcon } from 'src/icons';
 import { Skills } from '../skills/skills';
-import { ProjectsCarousel, TitleSection } from 'src/components';
 import { useCallback, useState } from 'react';
+import { ProjectsCarousel, TitleSection } from 'src/components';
 
 export interface PositionProps {
   position: string;
@@ -11,17 +11,29 @@ export interface PositionProps {
   location: string;
   positionDescription: string;
   skills?: string[];
-  images?: string[];
+  images?: ImagesType[];
+}
+
+export interface ImagesType {
+  companyName: string;
+  src: string;
+  titule: string;
+  urls: string[];
+  descripcion: string;
 }
 
 export const Position = (props: PositionProps) => {
   const { position, companyNameAndTime, dates, location, positionDescription, skills, images } =
     props;
-  const [showCarousel, setShowCarousel] = useState<{ images: string[] }>({ images: [] });
 
-  const openCarousel = useCallback((images: string[]) => {
-    setShowCarousel({ images });
-  }, []);
+  const [showCarousel, setShowCarousel] = useState<number | null>(null);
+
+  const setShowCarouselIndex = useCallback(
+    (index: number | null) => {
+      setShowCarousel(index);
+    },
+    [setShowCarousel],
+  );
 
   return (
     <>
@@ -39,21 +51,27 @@ export const Position = (props: PositionProps) => {
       <p className={styles.companyAndTime}>{positionDescription}</p>
       <Skills skills={skills} />
       <section className={styles.proyectsWrapper}>
-        {images?.map((item) => (
+        {images?.map((item, index) => (
           <button
             onClick={() => {
-              openCarousel(images);
+              setShowCarouselIndex(index);
             }}
             className={styles.btnContainerImage}
           >
             <div className={styles.overlayImage}>
               <span className={styles.overlayText}>See more WIP</span>
             </div>
-            <img src={item} className={styles.imgContainer} key={item} />
+            <img src={item.src} className={styles.imgContainer} key={item.src} />
           </button>
         ))}
       </section>
-      <ProjectsCarousel images={showCarousel.images} />
+      {images && showCarousel !== null && (
+        <ProjectsCarousel
+          images={images}
+          index={showCarousel}
+          setShowCarouselIndex={setShowCarouselIndex}
+        />
+      )}
     </>
   );
 };

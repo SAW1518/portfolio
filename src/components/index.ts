@@ -9,6 +9,6 @@ export { ButtonLink } from './button-link/button-link';
 export { ProjectsCarousel } from './projects-carousel/projects-carousel';
 
 // Types
-export type { PositionProps } from './position/position';
+export type { PositionProps, ImagesType } from './position/position';
 export type { ExperienceCompanyProps } from './experience-company/experience-company';
 export type { SkillsProps } from './skills/skills';

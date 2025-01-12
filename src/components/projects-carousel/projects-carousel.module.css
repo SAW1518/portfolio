@@ -21,7 +21,8 @@
 
 .projectsCarouselHeader {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: center;
   padding: 1rem;
 }
@@ -54,7 +55,7 @@
   padding: 0.5rem;
 }
 
-.subHeading {
+.projectsCarouselSubHeading {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: var(--textColorHeading);
@@ -71,6 +72,15 @@
   color: var(--textColorBase);
   margin-top: 0.4rem;
   margin-inline-end: 1rem;
+}
+
+.siteLink {
+  color: var(--textColorBase);
+
+}
+
+.siteLink:hover {
+  transform: scale(0.99);
 }
 
 @media (min-width: 768px) {

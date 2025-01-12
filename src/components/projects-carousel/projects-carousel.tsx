@@ -1,62 +1,87 @@
 import { createPortal } from 'react-dom';
+import { useCallback, useEffect } from 'react';
 import styles from './projects-carousel.module.css';
-import { useEffect } from 'react';
+import { ImagesType } from 'src/components';
+import { CloseIcon } from 'src/icons';
 
 interface ProjectsCarouselProps {
-  showCarousel?: boolean;
-  indexOpen?: number;
-  images?: string[];
+  images: ImagesType[];
+  index: number;
+  setShowCarouselIndex: (index: number | null) => void;
 }
 
-export const ProjectsCarousel = ({  images }: ProjectsCarouselProps) => {
+export const ProjectsCarousel = ({
+  images,
+  index,
+  setShowCarouselIndex,
+}: ProjectsCarouselProps) => {
   const pageWrapper = document.getElementById('pageWrapper') as Element;
+  const root = document.getElementById('root');
+  const currentImage = images[index];
+  const indexMarker = `${index + 1} of ${images.length}`;
 
-  const {
-    projectsCarouselHoverly,
-    projectsCarouselModal,
-    projectsCarouselHeader,
-    projectsCarouselText,
-    projectsCarouselMain,
-    projectsCarouselImageContainer,
-    projectsCarouselImage,
-    projectsCarouselDescription,
-    subHeading,
-    projectsCarouselPositionDescription,
-  } = styles;
+  const toggleScroll = useCallback(
+    (disable: boolean) => {
+      if (root) {
+        root.style.overflow = disable ? 'hidden' : '';
+        root.style.height = disable ? '100%' : '';
+      }
+    },
+    [root],
+  );
 
   useEffect(() => {
-    const root = document.getElementById('root');
-    if (root && images?.length) {
-      root.style.overflow = 'hidden';
-      root.style.height = '100%';
-    }
-  }, [images]);
-  console.log('xxx', images);
+    toggleScroll(true);
+    return () => toggleScroll(false);
+  }, [toggleScroll]);
 
-  if (!images?.length) {
-    return null;
-  }
+  const handleClose = useCallback(() => {
+    setShowCarouselIndex(null);
+    toggleScroll(false);
+  }, [setShowCarouselIndex, toggleScroll]);
 
-  return createPortal(
-    <div id="projectsCarousel" className={projectsCarouselHoverly}>
-      <section className={projectsCarouselModal}>
-        <header className={projectsCarouselHeader}>
-          <h2 className={projectsCarouselText}>Luxoft Projects</h2>
+  const RenderCarouselContent = () => (
+    <div className={styles.projectsCarouselHoverly} id="projectsCarousel">
+      <section className={styles.projectsCarouselModal}>
+        <header className={styles.projectsCarouselHeader}>
+          <h2 className={styles.projectsCarouselText}>{`${currentImage.companyName} Projects`}</h2>
+          <button onClick={handleClose} className={styles.closeButton}>
+            <CloseIcon />
+          </button>
         </header>
-        <main className={projectsCarouselMain}>
-          <div className={projectsCarouselImageContainer}>
-            <img className={projectsCarouselImage} src={images[0]} />
+        <main className={styles.projectsCarouselMain}>
+          <div className={styles.projectsCarouselImageContainer}>
+            <img
+              className={styles.projectsCarouselImage}
+              src={currentImage.src}
+              alt={`${currentImage.companyName} Project`}
+            />
           </div>
-          <div className={projectsCarouselDescription}>
-            <h3 className={subHeading}>Profile Management Interface</h3>
-            <p className={projectsCarouselPositionDescription}>
-              Proyectos desarrollados durante mi tiempo en Luxoft, incluyendo mejoras en la interfaz
-              de usuario y nuevas funcionalidades.
-            </p>
+          <div className={styles.projectsCarouselDescription}>
+            <h3 className={styles.projectsCarouselSubHeading}>{currentImage.titule}</h3>
+            <p className={styles.projectsCarouselPositionDescription}>{currentImage.descripcion}</p>
+            <ul>
+              {images[index].urls.map((item) => (
+                <li key={item}>
+                  <a className={styles.siteLink} target="_blank" href={item}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className={styles.projectsCarouselPositionDescription}>{indexMarker}</p>
+            {/* <button
+              onClick={() => {
+                setShowCarouselIndex(index + 1);
+              }}
+            >
+              Next
+            </button> */}
           </div>
         </main>
       </section>
-    </div>,
-    pageWrapper,
+    </div>
   );
+
+  return createPortal(<RenderCarouselContent />, pageWrapper);
 };

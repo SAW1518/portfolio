@@ -15,7 +15,6 @@
 
 .contactLink {
   display: flex;
-  gap: 0.5rem;
   color: rgba(209, 213, 219);
   background-color: rgba(31 41 55);
   justify-content: flex-start;

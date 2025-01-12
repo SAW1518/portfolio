@@ -6,3 +6,4 @@ export { CopyIcon } from './copy.icon';
 export { CalendarIcon } from './calendar.icon';
 export { LocationIcon } from './location.icon';
 export { PhoneIcon } from './phone.icon';
+export { CloseIcon } from './close.icon';
