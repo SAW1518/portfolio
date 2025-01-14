@@ -76,16 +76,23 @@
 
 .siteLink {
   color: var(--textColorBase);
-
 }
 
 .siteLink:hover {
   transform: scale(0.99);
 }
 
+
+
+@media (min-width: 640px) {
+  .projectsCarouselModal {
+    padding-inline: 2rem;
+  }
+}
 @media (min-width: 768px) {
   .projectsCarouselModal {
     border-radius: 0.5rem;
+    padding-inline: 3rem;
   }
 
   .projectsCarouselHeader {
@@ -93,5 +100,11 @@
   }
   .projectsCarouselMain {
     grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectsCarouselModal {
+    padding-inline: 5rem;
   }
 }
