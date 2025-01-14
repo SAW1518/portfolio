@@ -54,7 +54,7 @@
 }
 
 .btnContainerImage:first-child > .overlayImage {
-  animation: pulse 3s infinite;
+  animation: pulse 4s infinite;
 }
 
 .btnContainerImage:hover {
