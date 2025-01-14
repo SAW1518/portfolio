@@ -34,13 +34,15 @@
 @keyframes pulse {
   0% {
     opacity: 0;
-  
+    border-radius: .5rem;
   }
   50% {
     opacity: 50;
+    border-radius: 1rem;
   }
   80% {
     opacity: 80;
+    border-radius: 1.5rem;
   }
   100% {
     opacity: 0;
@@ -51,7 +53,7 @@
   position: relative;
 }
 
-.btnContainerImage:first-child > .overlayImage  {
+.btnContainerImage:first-child > .overlayImage {
   animation: pulse 3s infinite;
 }
 
