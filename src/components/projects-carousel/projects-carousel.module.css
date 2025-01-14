@@ -17,6 +17,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 64rem;
+  border-radius: 0.5rem;
 }
 
 .projectsCarouselHeader {
@@ -25,6 +26,7 @@
   justify-content: space-between;
   text-align: center;
   padding: 1rem;
+  text-align: left;
 }
 
 .projectsCarouselText {
@@ -34,6 +36,7 @@
 .projectsCarouselMain {
   display: grid;
   gap: 1rem;
+  grid-template-columns: 2fr 1fr;
 }
 
 .projectsCarouselImageContainer {
@@ -76,35 +79,21 @@
 
 .siteLink {
   color: var(--textColorBase);
+  margin-top: 1rem;
 }
 
 .siteLink:hover {
   transform: scale(0.99);
 }
 
-
-
-@media (min-width: 640px) {
-  .projectsCarouselModal {
-    padding-inline: 2rem;
-  }
-}
-@media (min-width: 768px) {
-  .projectsCarouselModal {
-    border-radius: 0.5rem;
-    padding-inline: 3rem;
-  }
-
-  .projectsCarouselHeader {
-    text-align: left;
+@media (width < 768px) {
+  .projectsCarouselDescription {
+    padding: 1.5rem;
   }
   .projectsCarouselMain {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: unset;
   }
-}
-
-@media (min-width: 1024px) {
   .projectsCarouselModal {
-    padding-inline: 5rem;
+    border-radius: unset;
   }
 }
