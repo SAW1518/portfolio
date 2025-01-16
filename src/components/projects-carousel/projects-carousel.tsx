@@ -10,6 +10,10 @@ interface ProjectsCarouselProps {
   setShowCarouselIndex: (index: number | null) => void;
 }
 
+type BtnContentType = {
+  [key: string]: { operationToShow: ImagesType; operation: () => void; icon: JSX.Element };
+};
+
 export const ProjectsCarousel = ({
   images,
   index,
@@ -40,9 +44,7 @@ export const ProjectsCarousel = ({
     toggleScroll(false);
   }, [setShowCarouselIndex, toggleScroll]);
 
-  const BtnContent: {
-    [key: string]: { operationToShow: ImagesType; operation: () => void; icon: JSX.Element };
-  } = {
+  const BtnContent: BtnContentType = {
     Next: {
       operationToShow: images[index + 1],
       operation: () => setShowCarouselIndex(index + 1),

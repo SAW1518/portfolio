@@ -105,5 +105,6 @@
   }
   .projectsCarouselModal {
     border-radius: unset;
+    min-height: 700px;
   }
 }
