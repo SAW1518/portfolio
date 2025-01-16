@@ -7,3 +7,5 @@ export { CalendarIcon } from './calendar.icon';
 export { LocationIcon } from './location.icon';
 export { PhoneIcon } from './phone.icon';
 export { CloseIcon } from './close.icon';
+export { BackIcon } from './back.icon';
+export { NextIcon } from './next.icon';

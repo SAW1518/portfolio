@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom';
 import { useCallback, useEffect } from 'react';
 import styles from './projects-carousel.module.css';
 import { ImagesType } from 'src/components';
-import { CloseIcon } from 'src/icons';
+import { BackIcon, CloseIcon, NextIcon } from 'src/icons';
 
 interface ProjectsCarouselProps {
   images: ImagesType[];
@@ -40,6 +40,29 @@ export const ProjectsCarousel = ({
     toggleScroll(false);
   }, [setShowCarouselIndex, toggleScroll]);
 
+  const BtnContent: {
+    [key: string]: { operationToShow: ImagesType; operation: () => void; icon: JSX.Element };
+  } = {
+    Next: {
+      operationToShow: images[index + 1],
+      operation: () => setShowCarouselIndex(index + 1),
+      icon: <NextIcon />,
+    },
+    Back: {
+      operationToShow: images[index - 1],
+      operation: () => setShowCarouselIndex(index - 1),
+      icon: <BackIcon />,
+    },
+  };
+
+  const CarouselBtn = ({ label }: { label: keyof typeof BtnContent }) => {
+    return (
+      <button onClick={BtnContent[label].operation}>
+        {BtnContent[label].operationToShow && BtnContent[label].icon}
+      </button>
+    );
+  };
+
   const RenderCarouselContent = () => (
     <div className={styles.projectsCarouselHoverly} id="projectsCarousel">
       <section className={styles.projectsCarouselModal}>
@@ -56,6 +79,10 @@ export const ProjectsCarousel = ({
               src={currentImage.src}
               alt={`${currentImage.companyName} Project`}
             />
+            <div className={styles.projectsCarouselBtnContainer}>
+              <CarouselBtn label="Back" />
+              <CarouselBtn label="Next" />
+            </div>
           </div>
           <div className={styles.projectsCarouselDescription}>
             <h3 className={styles.projectsCarouselSubHeading}>{currentImage.titule}</h3>
@@ -70,13 +97,6 @@ export const ProjectsCarousel = ({
               ))}
             </ul>
             <p className={styles.projectsCarouselPositionDescription}>{indexMarker}</p>
-            {/* <button
-              onClick={() => {
-                setShowCarouselIndex(index + 1);
-              }}
-            >
-              Next
-            </button> */}
           </div>
         </main>
       </section>
