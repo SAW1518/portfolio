@@ -93,7 +93,7 @@ export const ProjectsCarousel = ({
             <img
               className={styles.projectsCarouselImage}
               src={currentImage.src}
-              alt={`${currentImage.companyName}`}
+              alt={currentImage.companyName}
             />
             <div className={styles.projectsCarouselBtnContainer}>
               <CarouselBtn label="Back" />
