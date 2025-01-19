@@ -27,8 +27,7 @@ export const ProjectsCarousel = ({
   const toggleScroll = useCallback(
     (disable: boolean) => {
       if (root) {
-        root.style.overflow = disable ? 'hidden' : '';
-        root.style.height = disable ? '100%' : '';
+        root.style.overflow = disable ? 'auto' : '';
       }
     },
     [root],
@@ -65,11 +64,26 @@ export const ProjectsCarousel = ({
     );
   };
 
+  const DescripcionElement = ({ descripcion }: { descripcion: any }) => {
+    if (Array.isArray(descripcion)) {
+      return (
+        <>
+          {descripcion.map((des) => (
+            <p key={des} className={styles.projectsCarouselPositionDescription}>
+              {des}
+            </p>
+          ))}
+        </>
+      );
+    }
+    return <p className={styles.projectsCarouselPositionDescription}>{currentImage.descripcion}</p>;
+  };
+
   const RenderCarouselContent = () => (
     <div className={styles.projectsCarouselHoverly} id="projectsCarousel">
       <section className={styles.projectsCarouselModal}>
         <header className={styles.projectsCarouselHeader}>
-          <h2 className={styles.projectsCarouselText}>{`${currentImage.companyName} Projects`}</h2>
+          <h2 className={styles.projectsCarouselText}>{`${currentImage.companyName}`}</h2>
           <button onClick={handleClose} className={styles.closeButton}>
             <CloseIcon />
           </button>
@@ -79,7 +93,7 @@ export const ProjectsCarousel = ({
             <img
               className={styles.projectsCarouselImage}
               src={currentImage.src}
-              alt={`${currentImage.companyName} Project`}
+              alt={`${currentImage.companyName}`}
             />
             <div className={styles.projectsCarouselBtnContainer}>
               <CarouselBtn label="Back" />
@@ -88,7 +102,7 @@ export const ProjectsCarousel = ({
           </div>
           <div className={styles.projectsCarouselDescription}>
             <h3 className={styles.projectsCarouselSubHeading}>{currentImage.titule}</h3>
-            <p className={styles.projectsCarouselPositionDescription}>{currentImage.descripcion}</p>
+            <DescripcionElement descripcion={currentImage.descripcion} />
             <ul>
               {images[index].urls.map((item) => (
                 <li key={item}>

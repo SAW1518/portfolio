@@ -19,7 +19,7 @@ export interface ImagesType {
   src: string;
   titule: string;
   urls: string[];
-  descripcion: string;
+  descripcion: string | string[];
 }
 
 export const Position = (props: PositionProps) => {

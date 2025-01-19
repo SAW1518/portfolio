@@ -12,7 +12,7 @@ const foo: ExperienceCompanyProps[] = [
         dates: 'Mar 2024 - Present · 10 months',
         location: 'Guadalajara, Jalisco, México · Remote',
         positionDescription:
-          ' Frontend Developer in Expedia Group Authentication, Login, and Profile Teams, with expertise in applications such as Login, Profile, and Session Management. I am actively involved in the authentication processes for Expedia and its associated sub-brands, that includes platforms like Expedia.com, Vrbo.com, Hoteles.com, Wotif.com, Lastminute.au, Trivago.com, and more. ',
+          'Front-end engineer at Expedia, Inc., part of the Membership Growth and Profile Team. Expertise in Universal Login, Profile, and Session Management. Actively involved in authentication processes for Expedia and its sub-brands, including Expedia, Vrbo, Hotels, Wotif, Lastminute, and Trivago.',
         skills: [
           'React',
           'GraphQL',
@@ -30,8 +30,8 @@ const foo: ExperienceCompanyProps[] = [
         ],
         images: [
           {
-            companyName: 'EPAM Systems',
-            src: '/login.png',
+            companyName: 'EPAM Systems Projects',
+            src: 'expeda/login.png',
             titule: 'Working in sign in and sign up in Expedia grup',
             urls: [
               'https://www.expedia.com/login',
@@ -42,8 +42,8 @@ const foo: ExperienceCompanyProps[] = [
             descripcion: 'Sign in no required *',
           },
           {
-            companyName: 'EPAM Systems',
-            src: '/UP.png',
+            companyName: 'EPAM Systems Projects',
+            src: 'expeda/UP.png',
             titule: 'Working in account-profile in Expedia grup',
             urls: [
               'https://www.expedia.com/account',
@@ -54,15 +54,15 @@ const foo: ExperienceCompanyProps[] = [
             descripcion: 'Sign in required *',
           },
           {
-            companyName: 'EPAM Systems',
-            src: '/section-management.png',
+            companyName: 'EPAM Systems Projects',
+            src: 'expeda//section-management.png',
             titule: 'Working in Session management in Expedia grup',
             urls: ['https://www.expedia.com/account-security?dvc_history=true'],
             descripcion: 'Sign in required *',
           },
           {
-            companyName: 'EPAM Systems',
-            src: '/delete.png',
+            companyName: 'EPAM Systems Projects',
+            src: 'expeda//delete.png',
             titule: 'Working in Delete account in Expedia grup',
             urls: [
               'https://www.expedia.com/user/delete',
@@ -86,13 +86,26 @@ const foo: ExperienceCompanyProps[] = [
         dates: 'Feb. 2022 - Mar. 2024 · 2 yers 2 months',
         location: 'Guadalajara, Jalisco, México · Remote',
         positionDescription: 'Frontend developer',
-        skills: ['Javascript', 'Typescript', 'React', 'Jest', 'Github', 'REST APIs'],
+        skills: [
+          'React',
+          'GraphQL',
+          'Javascript',
+          'Typescript',
+          'HTTPS',
+          'CSS',
+          'HTML',
+          'Jest',
+          'Cypress.js',
+          'Github',
+          'Node.js',
+          'REST APIs',
+        ],
       },
     ],
   },
   {
-    imageSrc: '/m0sb1t_logo.jpeg',
-    imageAlt: 'M0SB1T System Lopo',
+    imageSrc: 'mosbit/m0sb1t_logo.jpeg',
+    imageAlt: 'M0SB1T Lopo',
     positionList: [
       {
         position: 'Frontend Lead Developer',
@@ -108,7 +121,7 @@ const foo: ExperienceCompanyProps[] = [
         dates: 'Nov. 2019 - Jul. 2020 · 9 months',
         location: 'Zapopan, Jalisco, México · Remote',
         positionDescription: 'React Native Developer',
-        skills: ['Javascript', 'NPM', 'React Native', 'REST APIs'],
+        skills: ['C/C++', 'Android'],
       },
       {
         position: 'Training Intern',
@@ -116,7 +129,96 @@ const foo: ExperienceCompanyProps[] = [
         dates: 'Jun. 2019 - Nov. 2019 · 6 months',
         location: 'Zapopan, Jalisco, México · Remote',
         positionDescription: 'React Native Developer',
-        skills: ['Javascript', 'NPM', 'React Native', 'REST APIs'],
+        skills: ['Javascript', 'React Native', 'NPM', 'REST APIs', 'Node.js'],
+        images: [
+          {
+            companyName: 'M0SB1T: Community App (Home screen)',
+            src: 'mosbit/community_login.png',
+            titule:
+              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            urls: [],
+            descripcion: ['Application removed from stores by M0sbit *', 'Login screen'],
+          },
+          {
+            companyName: 'M0SB1T: Community App (Home screen)',
+            src: 'mosbit/community_home.jpeg',
+            titule:
+              'Application to manage the administration of residential complex ( Android & IOS )',
+            urls: [],
+            descripcion: [
+              'Application removed from stores by M0sbit *',
+              'The user can navigate between the lower taps',
+              'The user can also select the balance of each account.',
+            ],
+          },
+          {
+            companyName: 'M0SB1T: Community App (Note)',
+            src: 'mosbit/community_resivo.png',
+            titule:
+              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            urls: [],
+            descripcion: [
+              'Application removed from stores by M0sbit *',
+              'The user can download payment receipts in PDF format',
+            ],
+          },
+          {
+            companyName: 'M0SB1T: Community App (Muti Hose seccion)',
+            src: 'mosbit/community_muticoto.png',
+            titule:
+              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            urls: [],
+            descripcion: [
+              'Application removed from stores by M0sbit *',
+              'When the user has multiple residences can choose which one to review',
+            ],
+          },
+          {
+            companyName: 'M0SB1T: Community App (Complaints List)',
+            src: 'mosbit/community_quejas.png',
+            titule:
+              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            urls: [],
+            descripcion: [
+              'Application removed from stores by M0sbit *',
+              'The user can access a list with the suggestion list.',
+              'This list has different channels such as direct communication with the administration or with other neighbors.',
+            ],
+          },
+          {
+            companyName: 'M0SB1T: Community App (Complaints Chat)',
+            src: 'mosbit/community_quejas_chat.png',
+            titule:
+              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            urls: [],
+            descripcion: [
+              'Application removed from stores by M0sbit *',
+              'The user can select any of these complaints and have a chat with the administration or with the neighbors.',
+            ],
+          },
+          {
+            companyName: 'M0SB1T: Community App (Green Areas)',
+            src: 'mosbit/community_areas_verdes.png',
+            titule:
+              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            urls: [],
+            descripcion: [
+              'Application removed from stores by M0sbit *',
+              'The user can access a list with the Green Areas lists.',
+            ],
+          },
+          {
+            companyName: 'M0SB1T: Community App (Green Areas)',
+            src: 'mosbit/community_areas_verdes_reserva.png',
+            titule:
+              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            urls: [],
+            descripcion: [
+              'Application removed from stores by M0sbit *',
+              'Once the user selects a green area, he can select a day/hour to reserve it.',
+            ],
+          },
+        ],
       },
     ],
   },
