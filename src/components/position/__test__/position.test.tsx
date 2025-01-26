@@ -78,7 +78,7 @@ describe('Position Component', () => {
       expect(getByText(skill)).toBeDefined();
     });
     getAllByRole('img').forEach((img, index) => {
-      expect(img.getAttribute('src')).toBe(defaultProps.images?.[index]);
+      expect(img.getAttribute('src')).toBe(defaultProps.images?.[index].src);
     });
   });
 });

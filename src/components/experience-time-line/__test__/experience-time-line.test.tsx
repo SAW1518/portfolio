@@ -25,7 +25,7 @@ describe('ExperienceTimeLine Component', () => {
     expect(secondCompanyProps.positionList).toHaveLength(1);
 
     const thirdCompanyProps = JSON.parse(experienceCompanies[2].textContent || '');
-    expect(thirdCompanyProps.imageAlt).toBe('M0SB1T System Lopo');
+    expect(thirdCompanyProps.imageAlt).toBe('M0SB1T Lopo');
     expect(thirdCompanyProps.positionList).toHaveLength(3);
   });
 });
