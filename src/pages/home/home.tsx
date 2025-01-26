@@ -22,7 +22,10 @@ export const Home = () => {
           </h1>
           <h3 className={styles.subHeading}>Software Engineer - JavaScript/TypeScript</h3>
           <h4 className={styles.skillsDescription}>
-            Specializing in React.js, Next.js, Tailwind CSS, and the MERN Stack.
+            I have a degree in Systems Engineering and a software developer with 5 years of
+            experience. My main focus is the development for web and mobile applications, with
+            React.js /Next.js and React Native tools for web development and Apps available on
+            Android and IOS.
           </h4>
         </section>
         <section id={SKILLS_ID} className={styles.pageSectionWrapper}>
