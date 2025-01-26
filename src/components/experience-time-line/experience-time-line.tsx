@@ -120,7 +120,7 @@ const foo: ExperienceCompanyProps[] = [
         companyNameAndTime: 'M0SB1T · Full-time',
         dates: 'Nov. 2019 - Jul. 2020 · 9 months',
         location: 'Zapopan, Jalisco, México · Remote',
-        positionDescription: 'React Native Developer',
+        positionDescription: 'Android and C/C++ Developer',
         skills: ['C/C++', 'Android'],
       },
       {

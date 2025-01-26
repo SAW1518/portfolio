@@ -53,6 +53,7 @@ export const Position = (props: PositionProps) => {
       <section className={styles.proyectsWrapper}>
         {images?.map((item, index) => (
           <button
+            key={item.src}
             onClick={() => {
               setShowCarouselIndex(index);
             }}

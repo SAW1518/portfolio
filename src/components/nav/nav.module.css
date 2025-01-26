@@ -1,0 +1,47 @@
+.navWrapper {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 50;
+  background-color: rgba(31, 41, 55, 0.8);
+}
+
+.nav {
+}
+
+.navListWrapper {
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+  color: rgb(156 163 175);
+  gap: 1rem;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.navItemWrapper {
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+}
+
+.navItemWrapper:hover {
+  color: rgb(96 165 250);
+}
+
+.navItemWrapper:hover::after {
+  content: '';
+  color: rgb(96 165 250);
+  width: 100%;
+  height: 0.1em;
+  background: rgb(96 165 250);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}

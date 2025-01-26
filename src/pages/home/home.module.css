@@ -2,7 +2,7 @@
   background: #111827;
   min-height: 100dvh;
   color: rgb(255, 255, 255);
-  padding-inline: 1rem;
+  padding-top: 4rem;
 }
 
 .header {
@@ -20,6 +20,7 @@
   font-size: 2.25rem;
   line-height: 2.5rem;
   text-wrap: balance;
+  scroll-margin: 5rem;
 }
 
 .subHeading {
@@ -76,6 +77,7 @@
 }
 
 .pageSectionWrapper {
+  scroll-margin: 3rem;
   padding-block-start: var(--paddingTopSection);
 }
 
