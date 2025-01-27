@@ -1,14 +1,23 @@
 import { ABOUT_ID, SKILLS_ID, CONTACT_ID, EXPERIENCE_ID } from 'src/constants';
 import styles from './nav.module.css';
-import { useState } from 'react';
-import { GlobalIcon } from 'src/icons';
+// import { useRef, useState } from 'react';
+// import { GlobalIcon } from 'src/icons';
 
 export const Nav = () => {
-  const [language, setLanguage] = useState('en');
+  // const [language, setLanguage] = useState('en');
 
-  const handleChangeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setLanguage(event.target.value);
-  };
+  // const selectRef = useRef<HTMLSelectElement>(null);
+
+  // // Función para abrir el <select> al hacer clic en el SVG
+  // const handleSvgClick = () => {
+  //   if (selectRef.current) {
+  //     selectRef.current.click(); // Dispara el evento de click
+  //   }
+  // };
+
+  // const handleChangeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  //   setLanguage(event.target.value);
+  // };
 
   return (
     <header className={styles.navWrapper}>
@@ -35,10 +44,10 @@ export const Nav = () => {
             </a>
           </li>
         </ul>
-        <label htmlFor="select_language" className={styles.labelWrapper}>
-          <GlobalIcon />
+        {/* <label  className={styles.labelWrapper}>
+          <GlobalIcon onClick={handleSvgClick} />
           <select
-            id="select_language"
+            ref={selectRef}
             className={styles.selectLanguage}
             value={language}
             onChange={handleChangeLanguage}
@@ -46,7 +55,7 @@ export const Nav = () => {
             <option value="es">Spanish</option>
             <option value="en">English</option>
           </select>
-        </label>
+        </label> */}
       </nav>
     </header>
   );
