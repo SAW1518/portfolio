@@ -112,7 +112,17 @@ const EXPERIENCE_COMPANY_DATA: ExperienceCompanyProps[] = [
         dates: 'Jun. 2020 - Feb. 2022 · 1 yers 9 months',
         location: 'LOCATION',
         positionDescription: 'POSITION_DESCRIPTION_M0SB1T_1',
-        skills: ['Javascript', 'NPM', 'React', 'Jest', 'REST APIs'],
+        skills: [
+          'Javascript',
+          'NPM',
+          'React',
+          'Jest',
+          'REST APIs',
+          'Node.js',
+          'CSS',
+          'HTML',
+          'Express.js',
+        ],
       },
       {
         position: 'SOFTWARE_DEVELOPER',
