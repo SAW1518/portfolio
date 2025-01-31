@@ -3,11 +3,11 @@ import styles from './home.module.css';
 import { ABOUT_ID, CONTACT_ID, SKILLS_ID, SkillsList, EXPERIENCE_ID } from 'src/constants';
 import { copy } from 'src/utils';
 import { useAlert } from 'src/hooks';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 export const Home = () => {
   const { show } = useAlert();
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const copyOnClick = () =>
     copy({ newClip: 'contactojesusenriqueul@gmail.com', onSuccessCallBack: show });
@@ -18,23 +18,18 @@ export const Home = () => {
       <div id="pageWrapper" className={styles.pageWrapper}>
         <section>
           <h1 id={ABOUT_ID} className={styles.mainHeading}>
-            Jesus Enrique Uribe Lopez
+            {t('NAME')}
           </h1>
-          <h3 className={styles.subHeading}>Software Engineer - JavaScript/TypeScript</h3>
-          <h4 className={styles.skillsDescription}>
-            I have a degree in Systems Engineering and a software developer with 5 years of
-            experience. My main focus is the development for web and mobile applications, with
-            React.js /Next.js and React Native tools for web development and Apps available on
-            Android and IOS.
-          </h4>
+          <h3 className={styles.subHeading}>{t('TITULE')}</h3>
+          <h4 className={styles.skillsDescription}>{t('DESCRIPTION')}</h4>
         </section>
         <section id={SKILLS_ID} className={styles.pageSectionWrapper}>
-          <TitleSection tag="h3" title="Skills" />
+          <TitleSection tag="h3" title={t('SKILLS')} />
           <Skills skills={SkillsList} />
         </section>
         <div className={styles.contactandEducation}>
           <section id={CONTACT_ID} className={styles.pageSectionWrapper}>
-            <TitleSection tag="h3" title="Contact Information" />
+            <TitleSection tag="h3" title={t('CONTACT_TITULE_SECTION')} />
             <div className={styles.contactInfo}>
               <ButtonLink
                 type="btn"
@@ -76,13 +71,13 @@ export const Home = () => {
             </div>
           </section>
           <section className={styles.pageSectionWrapper}>
-            <TitleSection tag="h3" title="Education" />
+            <TitleSection tag="h3" title={t('EDUCATION')} />
             <h3 className={styles.sectionSubTitle}>Tecnológico Mario Molina</h3>
-            <h4 className={styles.skillsDescription}>Systems Engineering</h4>
+            <h4 className={styles.skillsDescription}>{t('CARRER')}</h4>
           </section>
         </div>
         <section id={EXPERIENCE_ID} className={styles.pageSectionWrapper}>
-          <TitleSection tag="h3" title="Experience" />
+          <TitleSection tag="h3" title={t('EXPERIENCE')} />
           <ExperienceTimeLine />
         </section>
         <Alert />

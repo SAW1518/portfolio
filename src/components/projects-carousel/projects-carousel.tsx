@@ -3,6 +3,7 @@ import { useCallback, useEffect } from 'react';
 import styles from './projects-carousel.module.css';
 import { ImagesType } from 'src/components';
 import { BackIcon, CloseIcon, NextIcon } from 'src/icons';
+import { useTranslation } from 'react-i18next';
 
 interface ProjectsCarouselProps {
   images: ImagesType[];
@@ -21,8 +22,10 @@ export const ProjectsCarousel = ({
 }: ProjectsCarouselProps) => {
   const pageWrapper = document.getElementById('pageWrapper') as Element;
   const root = document.getElementById('root');
+  const { t } = useTranslation();
   const currentImage = images[index];
-  const indexMarker = `${index + 1} of ${images.length}`;
+  const indexMarker = `${index + 1} ${t('OF')} ${images.length}`;
+
 
   const toggleScroll = useCallback(
     (disable: boolean) => {
@@ -70,20 +73,22 @@ export const ProjectsCarousel = ({
         <>
           {descripcion.map((des) => (
             <p key={des} className={styles.projectsCarouselPositionDescription}>
-              {des}
+              {t(des)}
             </p>
           ))}
         </>
       );
     }
-    return <p className={styles.projectsCarouselPositionDescription}>{currentImage.descripcion}</p>;
+    return (
+      <p className={styles.projectsCarouselPositionDescription}>{t(currentImage.descripcion)}</p>
+    );
   };
 
   const RenderCarouselContent = () => (
     <div className={styles.projectsCarouselHoverly} id="projectsCarousel">
       <section className={styles.projectsCarouselModal}>
         <header className={styles.projectsCarouselHeader}>
-          <h2 className={styles.projectsCarouselText}>{`${currentImage.companyName}`}</h2>
+          <h2 className={styles.projectsCarouselText}>{t(currentImage.companyName)}</h2>
           <button onClick={handleClose} className={styles.closeButton}>
             <CloseIcon />
           </button>
@@ -101,7 +106,7 @@ export const ProjectsCarousel = ({
             </div>
           </div>
           <div className={styles.projectsCarouselDescription}>
-            <h3 className={styles.projectsCarouselSubHeading}>{currentImage.titule}</h3>
+            <h3 className={styles.projectsCarouselSubHeading}>{t(currentImage.titule)}</h3>
             <DescripcionElement descripcion={currentImage.descripcion} />
             <ul>
               {images[index].urls.map((item) => (

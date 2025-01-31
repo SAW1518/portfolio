@@ -1,1 +1,1 @@
-export { copy } from "./copy.utils";
+export { copy, getCurrentLanguage } from './utils.utils';

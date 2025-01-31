@@ -1,23 +1,18 @@
-import { ABOUT_ID, SKILLS_ID, CONTACT_ID, EXPERIENCE_ID } from 'src/constants';
+import { ChangeEvent, useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from './nav.module.css';
-import { useRef, useState } from 'react';
+
 import { GlobalIcon } from 'src/icons';
-
+import { getCurrentLanguage } from 'src/utils';
+import { ABOUT_ID, SKILLS_ID, CONTACT_ID, EXPERIENCE_ID } from 'src/constants';
 export const Nav = () => {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState(getCurrentLanguage());
+  const { t, i18n } = useTranslation();
 
-  const selectRef = useRef<HTMLSelectElement>(null);
-
-  // Función para abrir el <select> al hacer clic en el SVG
-  const handleSvgClick = () => {
-    if (selectRef.current) {
-      selectRef.current.click(); // Dispara el evento de click
-    }
-  };
-
-  const handleChangeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChangeLanguage = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     setLanguage(event.target.value);
-  };
+    i18n.changeLanguage(event.target.value);
+  }, []);
 
   return (
     <header className={styles.navWrapper}>
@@ -25,34 +20,33 @@ export const Nav = () => {
         <ul className={styles.navListWrapper}>
           <li>
             <a href={`#${ABOUT_ID}`} className={styles.navItemWrapper}>
-              about
+              {t('ABOUT')}
             </a>
           </li>
           <li>
             <a href={`#${SKILLS_ID}`} className={styles.navItemWrapper}>
-              skills
+              {t('SKILLS')}
             </a>
           </li>
           <li>
             <a href={`#${CONTACT_ID}`} className={styles.navItemWrapper}>
-              contact
+              {t('CONTACT')}
             </a>
           </li>
           <li>
             <a href={`#${EXPERIENCE_ID}`} className={styles.navItemWrapper}>
-              experience
+              {t('EXPERIENCE')}
             </a>
           </li>
         </ul>
-        <label  className={styles.labelWrapper}>
-          <GlobalIcon onClick={handleSvgClick} />
+        <label className={styles.labelWrapper}>
+          <GlobalIcon />
           <select
-            ref={selectRef}
             className={styles.selectLanguage}
             value={language}
             onChange={handleChangeLanguage}
           >
-            <option value="es">Spanish</option>
+            <option value="es">Español</option>
             <option value="en">English</option>
           </select>
         </label>

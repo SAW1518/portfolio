@@ -1,3 +1,5 @@
+import i18next from 'i18next';
+
 interface copyProps {
   newClip: string;
   onSuccessCallBack?: () => void;
@@ -13,4 +15,8 @@ export const copy = ({ newClip, onSuccessCallBack, onErrorCallBack }: copyProps)
     .catch(() => {
       onErrorCallBack?.();
     });
+};
+
+export const getCurrentLanguage = () => {
+  return i18next.languages[i18next.languages.length - 1];
 };

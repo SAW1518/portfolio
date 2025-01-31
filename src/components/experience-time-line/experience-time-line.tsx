@@ -1,18 +1,17 @@
 import { ExperienceCompany, ExperienceCompanyProps } from 'src/components';
 import styles from './experience-time-line.module.css';
 
-const foo: ExperienceCompanyProps[] = [
+const EXPERIENCE_COMPANY_DATA: ExperienceCompanyProps[] = [
   {
     imageSrc: '/epam_systems_logo.jpeg',
     imageAlt: 'EPAM System Lopo',
     positionList: [
       {
-        position: 'Software Engineer - JavaScript',
-        companyNameAndTime: 'EPAM Systems · Full-time',
+        position: 'TITULE',
+        companyNameAndTime: 'EPAM_SYSTEMS_TIME',
         dates: 'Mar 2024 - Present · 10 months',
-        location: 'Guadalajara, Jalisco, México · Remote',
-        positionDescription:
-          'Front-end engineer at Expedia, Inc., part of the Membership Growth and Profile Team. Expertise in Universal Login, Profile, and Session Management. Actively involved in authentication processes for Expedia and its sub-brands, including Expedia, Vrbo, Hotels, Wotif, Lastminute, and Trivago.',
+        location: 'LOCATION',
+        positionDescription: 'POSITION_DESCRIPTION_EPAM',
         skills: [
           'React',
           'GraphQL',
@@ -30,47 +29,47 @@ const foo: ExperienceCompanyProps[] = [
         ],
         images: [
           {
-            companyName: 'EPAM Systems Projects',
+            companyName: 'EPAM_IMAGES_COMPANY_NAME_1',
             src: 'expeda/login.png',
-            titule: 'Working in sign in and sign up in Expedia grup',
+            titule: 'EPAM_IMAGES_TITLE_1',
             urls: [
               'https://www.expedia.com/login',
               'https://www.vrbo.com/login?enable_login=true',
               'https://www.hoteles.com/login',
               'https://www.wotif.com/login',
             ],
-            descripcion: 'Sign in no required *',
+            descripcion: 'SIGN_IN_REQUIRED',
           },
           {
-            companyName: 'EPAM Systems Projects',
+            companyName: 'EPAM_IMAGES_COMPANY_NAME_1',
             src: 'expeda/UP.png',
-            titule: 'Working in account-profile in Expedia grup',
+            titule: 'EPAM_IMAGES_TITLE_2',
             urls: [
               'https://www.expedia.com/account',
               'https://www.vrbo.com/account',
               'https://www.hoteles.com/account',
               'https://www.wotif.com/account',
             ],
-            descripcion: 'Sign in required *',
+            descripcion: 'SIGN_IN_REQUIRED',
           },
           {
-            companyName: 'EPAM Systems Projects',
-            src: 'expeda//section-management.png',
-            titule: 'Working in Session management in Expedia grup',
+            companyName: 'EPAM_IMAGES_COMPANY_NAME_1',
+            src: 'expeda/section-management.png',
+            titule: 'EPAM_IMAGES_TITLE_3',
             urls: ['https://www.expedia.com/account-security?dvc_history=true'],
-            descripcion: 'Sign in required *',
+            descripcion: 'SIGN_IN_REQUIRED',
           },
           {
-            companyName: 'EPAM Systems Projects',
-            src: 'expeda//delete.png',
-            titule: 'Working in Delete account in Expedia grup',
+            companyName: 'EPAM_IMAGES_COMPANY_NAME_1',
+            src: 'expeda/delete.png',
+            titule: 'EPAM_IMAGES_TITLE_4',
             urls: [
               'https://www.expedia.com/user/delete',
               'https://www.vrbo.com/user/delete',
               'https://www.hoteles.com/user/delete',
               'https://www.wotif.com/user/delete',
             ],
-            descripcion: 'Sign in required *',
+            descripcion: 'SIGN_IN_REQUIRED',
           },
         ],
       },
@@ -78,14 +77,14 @@ const foo: ExperienceCompanyProps[] = [
   },
   {
     imageSrc: '/luxoft_logo.jpeg',
-    imageAlt: 'Luxoft System Lopo',
+    imageAlt: 'Luxoft System Logo',
     positionList: [
       {
-        position: 'Software Engineer - JavaScript',
-        companyNameAndTime: 'Luxoft · Full-time',
+        position: 'TITULE',
+        companyNameAndTime: 'LUXOFT_TIME',
         dates: 'Feb. 2022 - Mar. 2024 · 2 yers 2 months',
-        location: 'Guadalajara, Jalisco, México · Remote',
-        positionDescription: 'Frontend developer',
+        location: 'LOCATION',
+        positionDescription: 'POSITION_DESCRIPTION_LUXOFT',
         skills: [
           'React',
           'GraphQL',
@@ -105,118 +104,87 @@ const foo: ExperienceCompanyProps[] = [
   },
   {
     imageSrc: 'mosbit/m0sb1t_logo.jpeg',
-    imageAlt: 'M0SB1T Lopo',
+    imageAlt: 'M0SB1T Logo',
     positionList: [
       {
-        position: 'Frontend Lead Developer',
-        companyNameAndTime: 'M0SB1T · Full-time',
+        position: 'FRONTEND_LEAD_DEVELOPER',
+        companyNameAndTime: 'MOSBIT_TIME',
         dates: 'Jun. 2020 - Feb. 2022 · 1 yers 9 months',
-        location: 'Guadalajara, Jalisco, México · Remote',
-        positionDescription: 'Principal Frontend Lead',
+        location: 'LOCATION',
+        positionDescription: 'POSITION_DESCRIPTION_M0SB1T_1',
         skills: ['Javascript', 'NPM', 'React', 'Jest', 'REST APIs'],
       },
       {
-        position: 'Software Developer',
-        companyNameAndTime: 'M0SB1T · Full-time',
+        position: 'SOFTWARE_DEVELOPER',
+        companyNameAndTime: 'MOSBIT_TIME',
         dates: 'Nov. 2019 - Jul. 2020 · 9 months',
-        location: 'Zapopan, Jalisco, México · Remote',
-        positionDescription: 'Android and C/C++ Developer',
+        location: 'LOCATION',
+        positionDescription: 'POSITION_DESCRIPTION_M0SB1T_2',
         skills: ['C/C++', 'Android'],
       },
       {
-        position: 'Training Intern',
-        companyNameAndTime: 'M0SB1T · Full-time',
+        position: 'TRAINING_INTERN',
+        companyNameAndTime: 'MOSBIT_TIME',
         dates: 'Jun. 2019 - Nov. 2019 · 6 months',
-        location: 'Zapopan, Jalisco, México · Remote',
-        positionDescription: 'React Native Developer',
+        location: 'LOCATION',
+        positionDescription: 'POSITION_DESCRIPTION_M0SB1T_3',
         skills: ['Javascript', 'React Native', 'NPM', 'REST APIs', 'Node.js'],
         images: [
           {
-            companyName: 'M0SB1T: Community App (Home screen)',
+            companyName: 'M0SBIT_IMAGES_COMPANY_NAME_1',
             src: 'mosbit/community_login.png',
-            titule:
-              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            titule: 'M0SBIT_IMAGES_TITLE_1',
             urls: [],
-            descripcion: ['Application removed from stores by M0sbit *', 'Login screen'],
+            descripcion: ['M0SBIT_DESCRIPTION_1', 'M0SBIT_DESCRIPTION_2'],
           },
           {
-            companyName: 'M0SB1T: Community App (Home screen)',
+            companyName: 'M0SBIT_IMAGES_COMPANY_NAME_2',
             src: 'mosbit/community_home.jpeg',
-            titule:
-              'Application to manage the administration of residential complex ( Android & IOS )',
+            titule: 'M0SBIT_IMAGES_TITLE_1',
             urls: [],
-            descripcion: [
-              'Application removed from stores by M0sbit *',
-              'The user can navigate between the lower taps',
-              'The user can also select the balance of each account.',
-            ],
+            descripcion: ['M0SBIT_DESCRIPTION_1', 'M0SBIT_DESCRIPTION_3', 'M0SBIT_DESCRIPTION_4'],
           },
           {
-            companyName: 'M0SB1T: Community App (Note)',
+            companyName: 'M0SBIT_IMAGES_COMPANY_NAME_3',
             src: 'mosbit/community_resivo.png',
-            titule:
-              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            titule: 'M0SBIT_IMAGES_TITLE_1',
             urls: [],
-            descripcion: [
-              'Application removed from stores by M0sbit *',
-              'The user can download payment receipts in PDF format',
-            ],
+            descripcion: ['M0SBIT_DESCRIPTION_1', 'M0SBIT_DESCRIPTION_5'],
           },
           {
-            companyName: 'M0SB1T: Community App (Muti Hose seccion)',
+            companyName: 'M0SBIT_IMAGES_COMPANY_NAME_4',
             src: 'mosbit/community_muticoto.png',
-            titule:
-              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            titule: 'M0SBIT_IMAGES_TITLE_1',
             urls: [],
-            descripcion: [
-              'Application removed from stores by M0sbit *',
-              'When the user has multiple residences can choose which one to review',
-            ],
+            descripcion: ['M0SBIT_DESCRIPTION_1', 'M0SBIT_DESCRIPTION_6'],
           },
           {
-            companyName: 'M0SB1T: Community App (Complaints List)',
+            companyName: 'M0SBIT_IMAGES_COMPANY_NAME_5',
             src: 'mosbit/community_quejas.png',
-            titule:
-              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            titule: 'M0SBIT_IMAGES_TITLE_1',
             urls: [],
-            descripcion: [
-              'Application removed from stores by M0sbit *',
-              'The user can access a list with the suggestion list.',
-              'This list has different channels such as direct communication with the administration or with other neighbors.',
-            ],
+            descripcion: ['M0SBIT_DESCRIPTION_1', 'M0SBIT_DESCRIPTION_7', 'M0SBIT_DESCRIPTION_8'],
           },
           {
-            companyName: 'M0SB1T: Community App (Complaints Chat)',
+            companyName: 'M0SBIT_IMAGES_COMPANY_NAME_6',
             src: 'mosbit/community_quejas_chat.png',
-            titule:
-              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            titule: 'M0SBIT_IMAGES_TITLE_1',
             urls: [],
-            descripcion: [
-              'Application removed from stores by M0sbit *',
-              'The user can select any of these complaints and have a chat with the administration or with the neighbors.',
-            ],
+            descripcion: ['M0SBIT_DESCRIPTION_1', 'M0SBIT_DESCRIPTION_9'],
           },
           {
-            companyName: 'M0SB1T: Community App (Green Areas)',
+            companyName: 'M0SBIT_IMAGES_COMPANY_NAME_7',
             src: 'mosbit/community_areas_verdes.png',
-            titule:
-              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            titule: 'M0SBIT_IMAGES_TITLE_1',
             urls: [],
-            descripcion: [
-              'Application removed from stores by M0sbit *',
-              'The user can access a list with the Green Areas lists.',
-            ],
+            descripcion: ['M0SBIT_DESCRIPTION_1', 'M0SBIT_DESCRIPTION_10'],
           },
           {
-            companyName: 'M0SB1T: Community App (Green Areas)',
+            companyName: 'M0SBIT_IMAGES_COMPANY_NAME_8',
             src: 'mosbit/community_areas_verdes_reserva.png',
-            titule:
-              'Community: Application to manage the administration of residential complex ( Android & IOS )',
+            titule: 'M0SBIT_IMAGES_TITLE_1',
             urls: [],
-            descripcion: [
-              'Application removed from stores by M0sbit *',
-              'Once the user selects a green area, he can select a day/hour to reserve it.',
-            ],
+            descripcion: ['M0SBIT_DESCRIPTION_1', 'M0SBIT_DESCRIPTION_11'],
           },
         ],
       },
@@ -228,8 +196,8 @@ export const ExperienceTimeLine = () => {
   return (
     <section className={styles.experienceListWrapper}>
       <div className={styles.line} />
-      {foo.map((EC) => (
-        <ExperienceCompany {...EC} key={EC.imageAlt} />
+      {EXPERIENCE_COMPANY_DATA.map((EC_DATA) => (
+        <ExperienceCompany {...EC_DATA} key={EC_DATA.imageAlt} />
       ))}
     </section>
   );

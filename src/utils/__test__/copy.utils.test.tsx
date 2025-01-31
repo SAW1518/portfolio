@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { copy } from '../copy.utils';
+import { copy } from '../utils.utils';
 
 describe('copy', () => {
   beforeEach(() => {
