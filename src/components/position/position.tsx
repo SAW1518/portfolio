@@ -4,11 +4,12 @@ import { Skills } from '../skills/skills';
 import { useCallback, useState } from 'react';
 import { ProjectsCarousel, TitleSection } from 'src/components';
 import { useTranslation } from 'react-i18next';
+import { calculateDate, getCurrentLanguage } from 'src/utils/utils.utils';
 
 export interface PositionProps {
   position: string;
   companyNameAndTime: string;
-  dates: string;
+  dates: string | { initDate: Date; endDate: Date };
   location: string;
   positionDescription: string;
   skills?: string[];
@@ -44,7 +45,9 @@ export const Position = (props: PositionProps) => {
       <div className={styles.dateAndLocationWrapper}>
         <p className={styles.companyAndTime}>
           <CalendarIcon className={styles.icon} />
-          {dates}
+          {dates instanceof Object
+            ? `${calculateDate({ date: dates, lang: getCurrentLanguage() })} ${t('MONTHS')}`
+            : t(dates)}
         </p>
         <p className={styles.companyAndTime}>
           <LocationIcon className={styles.icon} /> {t(location)}

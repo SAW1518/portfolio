@@ -1,1 +1,1 @@
-export { copy, getCurrentLanguage } from './utils.utils';
+export { copy, getCurrentLanguage, calculateDate } from './utils.utils';

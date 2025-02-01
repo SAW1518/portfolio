@@ -50,5 +50,10 @@
   "M0SBIT_DESCRIPTION_10": "The user can access a list with the Green Areas lists.",
   "M0SBIT_DESCRIPTION_11": "Once the user selects a green area, he can select a day/hour to reserve it.",
   "SEE_MORE": "See more",
-  "OF": "of"
+  "OF": "of",
+  "MONTHS": "months",
+  "M0SBIT_TIME_TRAINING_INTERN": "Jun. 2019 - Nov. 2019 · 6 months",
+  "M0SBIT_TIME_SOFTWARE_DEVELOPER": "Nov. 2019 - Jul. 2020 · 9 months",
+  "M0SBIT_TIME_FRONTEND_LEAD_DEVELOPER": "Jun. 2020 - Feb. 2022 · 1 yers 9 months",
+  "LUXOFT_SOFTWAR_ENGINEER_JAVASCRIPT_TYPESCRIPT": "Feb. 2022 - Mar. 2024 · 2 yers 2 months"
 }

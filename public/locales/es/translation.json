@@ -50,5 +50,10 @@
   "M0SBIT_DESCRIPTION_10": "El usuario puede acceder a una lista con las listas de Áreas Verdes.",
   "M0SBIT_DESCRIPTION_11": "Una vez que el usuario selecciona un área verde, puede seleccionar un día/hora para reservarla.",
   "SEE_MORE": "Ver más",
-  "OF": "de"
+  "OF": "de",
+  "MONTHS": "meses",
+  "M0SBIT_TIME_TRAINING_INTERN": "Jun. 2019 - Nov. 2019 · 6 meses",
+  "M0SBIT_TIME_SOFTWARE_DEVELOPER": "Nov. 2019 - Jul. 2020 · 9 meses",
+  "M0SBIT_TIME_FRONTEND_LEAD_DEVELOPER": "Jun. 2020 - Feb. 2022 · 1 año 9 meses",
+  "LUXOFT_SOFTWAR_ENGINEER_JAVASCRIPT_TYPESCRIPT": "Feb. 2022 - Mar. 2024 · 2 años 2 meses"
 }
