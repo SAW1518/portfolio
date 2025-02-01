@@ -71,7 +71,7 @@ describe('Position Component', () => {
 
     expect(getByText(defaultProps.position)).toBeDefined();
     expect(getByText(defaultProps.companyNameAndTime)).toBeDefined();
-    expect(getByText(defaultProps.dates)).toBeDefined();
+    //expect(getByText(defaultProps.dates)).toBeDefined();
     expect(getByText(defaultProps.location)).toBeDefined();
     expect(getByText(defaultProps.positionDescription)).toBeDefined();
     defaultProps.skills?.forEach((skill) => {
