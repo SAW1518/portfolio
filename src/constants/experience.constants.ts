@@ -76,7 +76,7 @@ export const EXPERIENCE_COMPANY_DATA: ExperienceCompanyProps[] = [
   },
   {
     imageSrc: '/luxoft_logo.jpeg',
-    imageAlt: 'Luxoft System Logo',
+    imageAlt: 'Luxoft Logo',
     positionList: [
       {
         position: 'TITULE',

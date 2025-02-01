@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
+import { I18nextProvider } from 'react-i18next';
 import { AlertProvidersContext, AlertProvidersType } from 'src/providers';
+import i18n from 'src/mocks/i18n-mock-store';
 
 export const AllContextProvidersMock = ({
   children,
@@ -10,7 +12,7 @@ export const AllContextProvidersMock = ({
 }) => {
   return (
     <AlertProvidersContext.Provider value={alertProvidersContextStore}>
-      {children}
+      <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
     </AlertProvidersContext.Provider>
   );
 };

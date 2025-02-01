@@ -19,7 +19,7 @@ export const copy = ({ newClip, onSuccessCallBack, onErrorCallBack }: copyProps)
 };
 
 export const getCurrentLanguage = () => {
-  return i18next.languages[i18next.languages.length - 1];
+  return i18next?.languages[i18next?.languages?.length - 1];
 };
 
 export const calculateDate = ({
@@ -29,5 +29,7 @@ export const calculateDate = ({
   date: { initDate: Date; endDate: Date };
   lang: string;
 }) => {
-  return `${format(date.initDate, 'MMM. YYYY', lang)} - ${format(date.endDate, 'MMM. YYYY', lang)} · ${diffMonths(date.endDate, date.initDate)}`;
+  const { initDate, endDate } = date;
+
+  return `${format(initDate, 'MMM. YYYY', lang)} - ${format(endDate, 'MMM. YYYY', lang)} · ${diffMonths(endDate, initDate)}`;
 };

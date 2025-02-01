@@ -1,7 +1,9 @@
-import { Alert } from '../alert';
 import { render } from '@testing-library/react';
-import { AllContextProvidersMock } from 'src/mocks';
 import { describe, expect, it, vi } from 'vitest';
+
+import { Alert } from '../alert';
+import { AllContextProvidersMock } from 'src/mocks';
+
 
 vi.mock('react-dom', () => ({
   ...vi.importActual('react-dom'),

@@ -1,21 +1,18 @@
 import { describe, it, expect } from 'vitest';
 import {
   TitleSection,
-  SubTitleLink,
   Alert,
   ExperienceTimeLine,
   ExperienceCompany,
   Skills,
-  Position
+  Position,
 } from 'src/components';
 
 describe('Reexported modules', () => {
   it('should export TitleSection', () => {
     expect(TitleSection).toBeDefined();
   });
-  it('should export SubTitleLink', () => {
-    expect(SubTitleLink).toBeDefined();
-  });
+
   it('should export Alert', () => {
     expect(Alert).toBeDefined();
   });

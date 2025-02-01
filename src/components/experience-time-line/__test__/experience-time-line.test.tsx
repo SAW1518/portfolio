@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { ExperienceTimeLine } from '../experience-time-line';
 import { describe, expect, it, vi } from 'vitest';
 import { ExperienceCompanyProps } from 'src/components';
+import { AllContextProvidersMock } from 'src/mocks';
 
 vi.mock('src/components', () => ({
   ExperienceCompany: (props: ExperienceCompanyProps) => (
@@ -11,7 +12,11 @@ vi.mock('src/components', () => ({
 
 describe('ExperienceTimeLine Component', () => {
   it('should render the correct number of ExperienceCompany components', () => {
-    render(<ExperienceTimeLine />);
+    render(
+      <AllContextProvidersMock>
+        <ExperienceTimeLine />
+      </AllContextProvidersMock>,
+    );
 
     const experienceCompanies = screen.getAllByTestId('experience-company');
     expect(experienceCompanies).toHaveLength(3);
@@ -21,11 +26,11 @@ describe('ExperienceTimeLine Component', () => {
     expect(firstCompanyProps.positionList).toHaveLength(1);
 
     const secondCompanyProps = JSON.parse(experienceCompanies[1].textContent || '');
-    expect(secondCompanyProps.imageAlt).toBe('Luxoft System Lopo');
+    expect(secondCompanyProps.imageAlt).toBe('Luxoft Logo');
     expect(secondCompanyProps.positionList).toHaveLength(1);
 
     const thirdCompanyProps = JSON.parse(experienceCompanies[2].textContent || '');
-    expect(thirdCompanyProps.imageAlt).toBe('M0SB1T Lopo');
+    expect(thirdCompanyProps.imageAlt).toBe('M0SB1T Logo');
     expect(thirdCompanyProps.positionList).toHaveLength(3);
   });
 });
