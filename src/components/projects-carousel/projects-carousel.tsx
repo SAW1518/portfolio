@@ -20,12 +20,11 @@ export const ProjectsCarousel = ({
   index,
   setShowCarouselIndex,
 }: ProjectsCarouselProps) => {
+  const { t } = useTranslation();
   const pageWrapper = document.getElementById('pageWrapper') as Element;
   const root = document.getElementById('root');
-  const { t } = useTranslation();
   const currentImage = images[index];
   const indexMarker = `${index + 1} ${t('OF')} ${images.length}`;
-
 
   const toggleScroll = useCallback(
     (disable: boolean) => {
