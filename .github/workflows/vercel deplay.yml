@@ -16,13 +16,13 @@ jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Checking if Run unit tests have finished
         run: |
           while [[ "$(gh run list --workflow 'Run unit tests' --branch master --json conclusion --jq '.[0].conclusion')" != "success" ]]; do
             echo "Waiting for Run unit tests to finish..."
             sleep 30
           done
-      - uses: actions/checkout@v3
       - name: Install Vercel CLI
         run: npm install --global vercel@canary
       - name: Pull Vercel Environment Information
