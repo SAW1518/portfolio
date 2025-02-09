@@ -60,7 +60,7 @@ export const ProjectsCarousel = ({
 
   const CarouselBtn = ({ label }: { label: keyof typeof BtnContent }) => {
     return (
-      <button onClick={BtnContent[label].operation}>
+      <button className={styles.closeButton} onClick={BtnContent[label].operation}>
         {BtnContent[label].operationToShow && BtnContent[label].icon}
       </button>
     );

@@ -87,6 +87,12 @@
   transform: scale(0.99);
 }
 
+.closeButton {
+  all: unset; /* Resetea todos los estilos por defecto */
+  display: inline-block; /* Vuelve a hacerlo un elemento de bloque en línea */
+  cursor: pointer;
+}
+
 .projectsCarouselBtnContainer {
   display: flex;
   justify-content: space-between;
