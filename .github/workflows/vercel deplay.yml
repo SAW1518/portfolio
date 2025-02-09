@@ -6,14 +6,21 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
-  workflow_run:
-    workflows: ["Run unit tests"]
-    types:
-      - completed
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+      
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
     steps:
+      - name: Verificando si Run unit tests ha terminado
+        run: |
+          while [[ "$(gh run list --workflow 'Run unit tests' --branch master --json conclusion --jq '.[0].conclusion')" != "success" ]]; do
+            echo "Esperando que Run unit tests termine..."
+            sleep 30
+          done
       - uses: actions/checkout@v3
       - name: Install Vercel CLI
         run: npm install --global vercel@canary
