@@ -5,6 +5,7 @@ name: GitHub Actions Vercel Production Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  GH_TOKEN: ${{ github.token }}
 on:
   push:
     branches: ['main']
@@ -15,10 +16,10 @@ jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
     steps:
-      - name: Verificando si Run unit tests ha terminado
+      - name: Checking if Run unit tests have finished
         run: |
           while [[ "$(gh run list --workflow 'Run unit tests' --branch master --json conclusion --jq '.[0].conclusion')" != "success" ]]; do
-            echo "Esperando que Run unit tests termine..."
+            echo "Waiting for Run unit tests to finish..."
             sleep 30
           done
       - uses: actions/checkout@v3
