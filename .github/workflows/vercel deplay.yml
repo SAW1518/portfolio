@@ -20,7 +20,7 @@ jobs:
       - name: Checking if Run unit tests have finished
         run: |
           while [[ "$(gh run list --workflow 'Run unit tests' --branch master --json conclusion --jq '.[0].conclusion')" != "success" ]]; do
-            echo "$(gh run list --workflow 'Run unit tests' --branch master --json conclusion --jq '.[0].conclusion')"
+            echo $(gh run list --workflow 'Run unit tests' --branch master --json conclusion --jq '.[0].conclusion')
             echo "Waiting for Run unit tests to finish..."
             sleep 30
           done
