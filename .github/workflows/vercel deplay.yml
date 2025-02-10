@@ -11,7 +11,7 @@ on:
     branches: ['main']
   pull_request:
     branches: ['main']
-      
+
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
@@ -24,6 +24,15 @@ jobs:
       #       echo "Waiting for Run unit tests to finish..."
       #       sleep 30
       #     done
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build --if-present
       - name: Install Vercel CLI
         run: npm install --global vercel@canary
       - name: Pull Vercel Environment Information
