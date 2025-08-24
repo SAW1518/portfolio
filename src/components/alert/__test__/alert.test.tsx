@@ -3,7 +3,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 import { Alert } from '../alert';
 import { AllContextProvidersMock } from 'src/mocks';
-
+import { alertProvidersDefaultMock } from 'src/mocks/all-context-providers-mock';
 
 vi.mock('react-dom', () => ({
   ...vi.importActual('react-dom'),
@@ -14,7 +14,9 @@ describe('Alert', () => {
   it('should render the alert component', () => {
     const { getAllByText } = render(
       <div>
-        <AllContextProvidersMock alertProvidersContextStore={{ showAlert: true, show: () => {} }}>
+        <AllContextProvidersMock
+          alertProvidersContextStore={{ ...alertProvidersDefaultMock, showAlert: true }}
+        >
           <div id="pageWrapper">
             <Alert />
           </div>
