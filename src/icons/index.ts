@@ -10,3 +10,4 @@ export { CloseIcon } from './close.icon';
 export { BackIcon } from './back.icon';
 export { NextIcon } from './next.icon';
 export { GlobalIcon } from './global.icon';
+export { DownloadIcon } from './download.icon';

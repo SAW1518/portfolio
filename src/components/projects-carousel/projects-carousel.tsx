@@ -4,6 +4,7 @@ import styles from './projects-carousel.module.css';
 import { ImagesType } from 'src/components';
 import { BackIcon, CloseIcon, NextIcon } from 'src/icons';
 import { useTranslation } from 'react-i18next';
+import { useAlert } from 'src/hooks';
 
 interface ProjectsCarouselProps {
   images: ImagesType[];
@@ -21,6 +22,7 @@ export const ProjectsCarousel = ({
   setShowCarouselIndex,
 }: ProjectsCarouselProps) => {
   const { t } = useTranslation();
+  const { closeCarousel } = useAlert();
   const pageWrapper = document.getElementById('pageWrapper') as Element;
   const root = document.getElementById('root');
   const currentImage = images[index];
@@ -42,8 +44,9 @@ export const ProjectsCarousel = ({
 
   const handleClose = useCallback(() => {
     setShowCarouselIndex(null);
+    closeCarousel();
     toggleScroll(false);
-  }, [setShowCarouselIndex, toggleScroll]);
+  }, [setShowCarouselIndex, closeCarousel, toggleScroll]);
 
   const BtnContent: BtnContentType = {
     Next: {

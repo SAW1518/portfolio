@@ -5,11 +5,12 @@ import {
   LinkedinIcon,
   GithubIcon,
   PhoneIcon,
+  DownloadIcon,
 } from 'src/icons';
 import styles from './button-link.module.css';
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, HTMLAttributes } from 'react';
 
-type IconType = 'email' | 'copy' | 'linkedin' | 'link' | 'git' | 'phone';
+type IconType = 'email' | 'copy' | 'linkedin' | 'link' | 'git' | 'phone' | 'download';
 
 const Wrappers: Record<'btn' | 'link', 'button' | 'a'> = {
   btn: 'button',
@@ -23,6 +24,7 @@ const Icon: Record<IconType, JSX.Element | null> = {
   linkedin: <LinkedinIcon className={styles.icon} />,
   git: <GithubIcon className={styles.icon} />,
   phone: <PhoneIcon className={styles.icon} />,
+  download: <DownloadIcon className={styles.icon} />,
 };
 export interface ButtonLinkProps {
   text: string;

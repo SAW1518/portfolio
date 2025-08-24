@@ -26,6 +26,7 @@ module.exports = {
     'prettier',
     'css-modules',
     'simple-import-sort',
+    "react-hooks"
   ],
   settings: {
     'import/resolver': {
@@ -35,7 +36,8 @@ module.exports = {
     },
   },
   rules: {
-    'react-hooks/exhaustive-deps': 'warn',
+    "react-hooks/rules-of-hooks": 'error',
+    "react-hooks/exhaustive-deps": 'warn' ,
     'css-modules/composed-class-names': 'warn',
     'css-modules/css-variables': 'warn',
     'react/react-in-jsx-scope': ['off'],

@@ -5,14 +5,21 @@ import styles from './nav.module.css';
 import { GlobalIcon } from 'src/icons';
 import { getCurrentLanguage } from 'src/utils';
 import { ABOUT_ID, SKILLS_ID, CONTACT_ID, EXPERIENCE_ID } from 'src/constants';
+import { useAlert } from 'src/hooks';
+
 export const Nav = () => {
   const [language, setLanguage] = useState(getCurrentLanguage());
   const { t, i18n } = useTranslation();
+  const { isCarouselOpen } = useAlert();
 
   const handleChangeLanguage = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     setLanguage(event.target.value);
     i18n.changeLanguage(event.target.value);
   }, []);
+
+  if (isCarouselOpen) {
+    return null;
+  }
 
   return (
     <header className={styles.navWrapper}>

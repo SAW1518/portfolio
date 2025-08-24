@@ -3,7 +3,10 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 import { ProjectsCarousel } from '../projects-carousel';
 import { ImagesType } from 'src/components';
-import { AllContextProvidersMock } from 'src/mocks';
+import {
+  alertProvidersDefaultMock,
+  AllContextProvidersMock,
+} from 'src/mocks/all-context-providers-mock';
 
 describe('ProjectsCarousel', () => {
   const mockSetShowCarouselIndex = vi.fn();
@@ -72,7 +75,6 @@ describe('ProjectsCarousel', () => {
       </AllContextProvidersMock>,
     );
 
-
     fireEvent.click(getAllByRole('button')[2]);
     expect(mockSetShowCarouselIndex).toHaveBeenCalledWith(1);
   });
@@ -94,8 +96,14 @@ describe('ProjectsCarousel', () => {
   });
 
   it('should close the carousel when clicking the close button', () => {
+    const alertProvidersCloseMock = vi.fn();
     const { getAllByRole } = render(
-      <AllContextProvidersMock>
+      <AllContextProvidersMock
+        alertProvidersMock={{
+          ...alertProvidersDefaultMock,
+          closeCarousel: alertProvidersCloseMock,
+        }}
+      >
         <ProjectsCarousel
           images={mockImages}
           index={0}
@@ -107,6 +115,7 @@ describe('ProjectsCarousel', () => {
     fireEvent.click(getAllByRole('button')[0]);
 
     expect(mockSetShowCarouselIndex).toHaveBeenCalledWith(null);
+    expect(alertProvidersCloseMock).toHaveBeenCalled();
   });
 
   it('should render the correct translation for index marker', () => {

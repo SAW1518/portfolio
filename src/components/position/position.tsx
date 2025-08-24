@@ -5,6 +5,7 @@ import { useCallback, useState } from 'react';
 import { ProjectsCarousel, TitleSection } from 'src/components';
 import { useTranslation } from 'react-i18next';
 import { calculateDate, getCurrentLanguage } from 'src/utils/utils.utils';
+import { useAlert } from 'src/hooks';
 
 export interface PositionProps {
   position: string;
@@ -30,12 +31,18 @@ export const Position = (props: PositionProps) => {
 
   const [showCarousel, setShowCarousel] = useState<number | null>(null);
   const { t } = useTranslation();
+  const { openCarousel, closeCarousel } = useAlert();
 
   const setShowCarouselIndex = useCallback(
     (index: number | null) => {
       setShowCarousel(index);
+      if (index !== null) {
+        openCarousel();
+      } else {
+        closeCarousel();
+      }
     },
-    [setShowCarousel],
+    [setShowCarousel, openCarousel, closeCarousel],
   );
 
   return (
