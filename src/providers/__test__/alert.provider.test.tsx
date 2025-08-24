@@ -2,6 +2,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { AlertProvidersContext } from 'src/providers';
 import { useContext } from 'react';
 import { act, render, renderHook } from '@testing-library/react';
+import { alertProvidersDefaultMock } from 'src/mocks/all-context-providers-mock';
 
 const TestComponent = () => {
   const context = useContext(AlertProvidersContext);
@@ -34,17 +35,17 @@ describe('<AlertProvidersContext/>', () => {
   });
   it('should provide the context', () => {
     const { getByText } = render(
-      <AlertProvidersContext.Provider value={{ showAlert: false, show: () => {} }}>
+      <AlertProvidersContext.Provider value={{ ...alertProvidersDefaultMock, showAlert: false }}>
         <TestComponent />
       </AlertProvidersContext.Provider>,
     );
 
-    expect(getByText('{"showAlert":false}')).toBeDefined();
+    expect(getByText('{"showAlert":false,"isCarouselOpen":false}')).toBeDefined();
   });
 
   it('should hide the alert after 3 seconds', () => {
     const { queryByText, getByText } = render(
-      <AlertProvidersContext.Provider value={{ showAlert: true, show: () => {} }}>
+      <AlertProvidersContext.Provider value={{ ...alertProvidersDefaultMock, showAlert: true }}>
         <TestComponentRuningShow />
       </AlertProvidersContext.Provider>,
     );

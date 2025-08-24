@@ -2,10 +2,11 @@ import { ReactNode } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { AlertProvidersContext, AlertProvidersType } from 'src/providers';
 import i18n from 'src/mocks/i18n-mock-store';
+import { alertProvidersDefaultMock } from './all-context-providers-mock';
 
 export const AllContextProvidersMock = ({
   children,
-  alertProvidersContextStore = { showAlert: false, show: () => {} },
+  alertProvidersContextStore = alertProvidersDefaultMock,
 }: {
   children: ReactNode;
   alertProvidersContextStore?: AlertProvidersType;
