@@ -1,6 +1,18 @@
 import { Alert, TitleSection, ExperienceTimeLine, Skills, ButtonLink, Nav } from 'src/components';
 import styles from './home.module.css';
-import { ABOUT_ID, CONTACT_ID, SKILLS_ID, SkillsList, EXPERIENCE_ID } from 'src/constants';
+import {
+  ABOUT_ID,
+  CONTACT_ID,
+  SKILLS_ID,
+  SkillsList,
+  EXPERIENCE_ID,
+  EMAIL_ADDRESS,
+  CV_URL,
+  LINKEDIN_URL,
+  GITHUB_URL,
+  LINKEDIN_TEXT,
+  GITHUB_TEXT,
+} from 'src/constants';
 import { copy } from 'src/utils';
 import { useAlert } from 'src/hooks';
 import { useTranslation } from 'react-i18next';
@@ -9,10 +21,8 @@ export const Home = () => {
   const { show } = useAlert();
   const { t } = useTranslation();
 
-  const copyOnClick = () =>
-    copy({ newClip: 'contactojesusenriqueul@gmail.com', onSuccessCallBack: show });
+  const copyOnClick = () => copy({ newClip: EMAIL_ADDRESS, onSuccessCallBack: show });
 
-  // Translation variables
   const nameText = t('NAME');
   const titleText = t('TITULE');
   const descriptionText = t('DESCRIPTION');
@@ -28,9 +38,7 @@ export const Home = () => {
       <Nav />
       <div id="pageWrapper" className={styles.pageWrapper}>
         <section>
-          <h1 id={ABOUT_ID} className={styles.mainHeading}>
-            {nameText}
-          </h1>
+          <h1 id={ABOUT_ID} className={styles.mainHeading}>{nameText}</h1>
           <h3 className={styles.subHeading}>{titleText}</h3>
           <h4 className={styles.skillsDescription}>{descriptionText}</h4>
         </section>
@@ -46,7 +54,7 @@ export const Home = () => {
                 type="btn"
                 leftIcon="email"
                 rightIcon="copy"
-                text="contactojesusenriqueul@gmail.com"
+                text={EMAIL_ADDRESS}
                 buttonProps={{ onClick: copyOnClick }}
               />
               <ButtonLink
@@ -56,37 +64,27 @@ export const Home = () => {
                 text={downloadCvText}
                 anchorProps={{
                   target: '_blank',
-                  href: 'https://drive.google.com/file/d/1MNNwXAZeQTfJaHq_t5BidlbM1glWu3Lg/view?usp=drive_link',
+                  href: CV_URL,
                 }}
               />
-              {/* <ButtonLink
-                type="link"
-                leftIcon="phone"
-                rightIcon="link"
-                text=""
-                anchorProps={{
-                  target: '_blank',
-                  href: 'https://api.whatsapp.com/send/?phone=523881027335',
-                }}
-              /> */}
               <ButtonLink
                 type="link"
                 leftIcon="linkedin"
                 rightIcon="link"
-                text="linkedin.com/in/jesus-enrique-ul"
+                text={LINKEDIN_TEXT}
                 anchorProps={{
                   target: '_blank',
-                  href: 'https://www.linkedin.com/in/jesus-enrique-ul',
+                  href: LINKEDIN_URL,
                 }}
               />
               <ButtonLink
                 type="link"
                 leftIcon="git"
                 rightIcon="link"
-                text="github.com/SAW1518"
+                text={GITHUB_TEXT}
                 anchorProps={{
                   target: '_blank',
-                  href: 'https://github.com/SAW1518',
+                  href: GITHUB_URL,
                 }}
               />
             </div>
