@@ -2,7 +2,7 @@
 export const EMAIL_ADDRESS = 'contactojesusenriqueul@gmail.com';
 
 export const CV_URL =
-  'https://drive.google.com/file/d/1MNNwXAZeQTfJaHq_t5BidlbM1glWu3Lg/view?usp=drive_link';
+  'https://drive.google.com/file/d/1Gh63Nf4-2E0VW9Slhwihmy3qhZny2xPE/view';
 
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/jesus-enrique-ul';
 export const GITHUB_URL = 'https://github.com/SAW1518';
