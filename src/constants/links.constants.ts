@@ -1,8 +1,7 @@
 // Centralized external links and contact info
 export const EMAIL_ADDRESS = 'contactojesusenriqueul@gmail.com';
 
-export const CV_URL =
-  'https://drive.google.com/file/d/1Gh63Nf4-2E0VW9Slhwihmy3qhZny2xPE/view';
+export const CV_URL = 'https://drive.google.com/file/d/14JUhPmOJv3pbs8sITF96o5g2Ztcu8YlU/view';
 
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/jesus-enrique-ul';
 export const GITHUB_URL = 'https://github.com/SAW1518';
