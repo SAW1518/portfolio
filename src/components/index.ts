@@ -6,7 +6,8 @@ export { Skills } from './skills/skills';
 export { Position } from './position/position';
 export { ButtonLink } from './button-link/button-link';
 export { ProjectsCarousel } from './projects-carousel/projects-carousel';
-export { Nav } from './nav/nav'
+export { Nav } from './nav/nav';
+export { Recognitions } from './recognitions/recognitions';
 
 // Types
 export type { PositionProps, ImagesType } from './position/position';

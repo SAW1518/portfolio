@@ -1,4 +1,4 @@
-import { Alert, TitleSection, ExperienceTimeLine, Skills, ButtonLink, Nav } from 'src/components';
+import { Alert, TitleSection, ExperienceTimeLine, Skills, ButtonLink, Nav, Recognitions } from 'src/components';
 import styles from './home.module.css';
 import {
   ABOUT_ID,
@@ -95,6 +95,7 @@ export const Home = () => {
             <h4 className={styles.skillsDescription}>{careerText}</h4>
           </section>
         </div>
+        <Recognitions />
         <section id={EXPERIENCE_ID} className={styles.pageSectionWrapper}>
           <TitleSection tag="h3" title={experienceText} />
           <ExperienceTimeLine />
