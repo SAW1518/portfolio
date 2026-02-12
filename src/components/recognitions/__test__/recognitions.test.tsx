@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { describe, expect, it, vi, beforeEach } from 'vitest';
+import { describe, expect, it, beforeEach } from 'vitest';
 import { Recognitions } from '../recognitions';
 import { AllContextProvidersMock } from 'src/mocks/all-context-providers-mock';
 
