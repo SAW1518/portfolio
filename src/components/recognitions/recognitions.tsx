@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useAlert } from 'src/hooks';
 import { TitleSection } from '../title-section/title-section';
 import { ProjectsCarousel } from '../projects-carousel/projects-carousel';
-import styles from './Recognitions.module.css';
+import styles from './recognitions.module.css';
 
 export const Recognitions = () => {
  const { t } = useTranslation();
