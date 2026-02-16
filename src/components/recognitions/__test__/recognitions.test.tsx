@@ -17,7 +17,7 @@ describe('Recognitions Component', () => {
   );
 
   // Check section title
-  expect(screen.getByText('Recognitions')).toBeDefined();
+  expect(screen.getByText('Awards')).toBeDefined();
 
   // Check card content (using English translations loaded in mock)
   expect(screen.getByText('Accessibility PR Powerhouses')).toBeDefined();

@@ -6,6 +6,7 @@ export { Skills } from './skills/skills';
 export { Position } from './position/position';
 export { ButtonLink } from './button-link/button-link';
 export { ProjectsCarousel } from './projects-carousel/projects-carousel';
+export { OverlayWrapper } from './overlay-wrapper/overlay-wrapper';
 export { Nav } from './nav/nav';
 export { Recognitions } from './recognitions/recognitions';
 

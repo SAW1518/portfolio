@@ -1,7 +1,6 @@
-import { createPortal } from 'react-dom';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import styles from './projects-carousel.module.css';
-import { ImagesType } from 'src/components';
+import { ImagesType, OverlayWrapper } from 'src/components';
 import { BackIcon, CloseIcon, NextIcon } from 'src/icons';
 import { useTranslation } from 'react-i18next';
 import { useAlert } from 'src/hooks';
@@ -23,30 +22,13 @@ export const ProjectsCarousel = ({
 }: ProjectsCarouselProps) => {
   const { t } = useTranslation();
   const { closeCarousel } = useAlert();
-  const pageWrapper = document.getElementById('pageWrapper') as Element;
-  const root = document.getElementById('root');
   const currentImage = images[index];
   const indexMarker = `${index + 1} ${t('OF')} ${images.length}`;
-
-  const toggleScroll = useCallback(
-    (disable: boolean) => {
-      if (root) {
-        root.style.overflow = disable ? 'auto' : '';
-      }
-    },
-    [root],
-  );
-
-  useEffect(() => {
-    toggleScroll(true);
-    return () => toggleScroll(false);
-  }, [toggleScroll]);
 
   const handleClose = useCallback(() => {
     setShowCarouselIndex(null);
     closeCarousel();
-    toggleScroll(false);
-  }, [setShowCarouselIndex, closeCarousel, toggleScroll]);
+  }, [setShowCarouselIndex, closeCarousel]);
 
   const BtnContent: BtnContentType = {
     Next: {
@@ -126,5 +108,9 @@ export const ProjectsCarousel = ({
     </div>
   );
 
-  return createPortal(<RenderCarouselContent />, pageWrapper);
+  return (
+    <OverlayWrapper>
+      <RenderCarouselContent />
+    </OverlayWrapper>
+  );
 };
