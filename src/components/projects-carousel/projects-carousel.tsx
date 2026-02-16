@@ -69,8 +69,8 @@ export const ProjectsCarousel = ({
   };
 
   const RenderCarouselContent = () => (
-    <div className={styles.projectsCarouselHoverly} id="projectsCarousel">
-      <section className={styles.projectsCarouselModal}>
+    <div className={styles.projectsCarouselHoverly} id="projectsCarousel" onClick={handleClose}>
+      <section className={styles.projectsCarouselModal} onClick={(e) => e.stopPropagation()}>
         <header className={styles.projectsCarouselHeader}>
           <h2 className={styles.projectsCarouselText}>{t(currentImage.companyName)}</h2>
           <button onClick={handleClose} className={styles.closeButton}>
